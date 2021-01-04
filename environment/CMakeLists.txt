@@ -15,3 +15,6 @@ install (DIRECTORY models/vte_table DESTINATION share/gazebo/models)
 install (DIRECTORY models/vte_mustard DESTINATION share/gazebo/models)
 
 install (FILES worlds/vte_scenario.sdf DESTINATION share/gazebo/worlds)
+
+# Add standard uninstall target
+include(AddUninstallTarget)

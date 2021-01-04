@@ -9,7 +9,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-project(haptic_exploration
+project(new_model_haptic_exploration
         LANGUAGES CXX
         VERSION 0.0.100)
 

@@ -46,3 +46,5 @@ install(TARGETS ${PLUGIN_TARGET_NAME}
         LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT shlib
  )
 
+# Add standard uninstall target
+include(AddUninstallTarget)

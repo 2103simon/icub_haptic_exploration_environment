@@ -3343,7 +3343,7 @@
 			</visualize>
 			<plugin filename="libgazebo_yarp_depthCamera.so" name="left_camera_depth_plugin">
 				<yarpConfigurationFile>
-					model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_depth_camera.ini
+					model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_depth_camera.ini
 				</yarpConfigurationFile>
 			</plugin>
 		</sensor>
@@ -3387,7 +3387,7 @@
 			</visualize>
 			<plugin filename="libgazebo_yarp_camera.so" name="right_camera_plugin">
 				<yarpConfigurationFile>
-					model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_rgb_camera.ini
+					model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_rgb_camera.ini
 				</yarpConfigurationFile>
 			</plugin>
 		</sensor>
