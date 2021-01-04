@@ -20,7 +20,6 @@ endmacro()
 
 # Get list of models 
 subdirlist(subdirs ${CMAKE_CURRENT_SOURCE_DIR})
-<<<<<<< HEAD
 
 # Install each model 
 foreach (dir ${subdirs})
@@ -29,10 +28,3 @@ endforeach ()
 
 # Add standard uninstall target
 include(AddUninstallTarget)
-=======
-
-# Install each model 
-foreach (dir ${subdirs})
-  install (DIRECTORY ${dir} DESTINATION share/gazebo/models)
-endforeach ()
->>>>>>> af2c891f33187efa1dbc682149533ac79df7b9a3
