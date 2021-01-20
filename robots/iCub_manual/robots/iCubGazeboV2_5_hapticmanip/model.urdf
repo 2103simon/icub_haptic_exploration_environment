@@ -818,7 +818,7 @@
 		<limit effort="50000" lower="-1.3962634016" upper="0.436332312999" velocity="50000" />
 		<dynamics damping="1.0" friction="0.0" />
 	</joint>
-        <link name="r_hand">
+	<link name="r_hand">
 		<inertial>
 			<origin xyz="-0.064668163717 0.0056002 0.0226812940918" rpy="0 0 0" />
 			<mass value="0.248289" />
@@ -853,7 +853,7 @@
 		<origin xyz="0.000634106499644 -0.0194999 0.00236651831751" rpy="0 0 0" />
 		<axis xyz="2.22044604925e-16 -1.0 0.0" />
 		<parent link="r_wrist_1" />
-                <child link="r_hand" />
+		<child link="r_hand" />
 		<limit effort="50000" lower="-0.349065850399" upper="0.436332312999" velocity="50000" />
 		<dynamics damping="1.0" friction="0.0" />
 	</joint>
@@ -861,7 +861,7 @@
 	<joint name="r_hand_dh_frame_fixed_joint" type="fixed">
 		<origin xyz="-0.0576542978428 -0.0055568 0.0136938323083" rpy="-1.57079632679 -0.261799319827 3.14159265359" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand" />
+		<parent link="r_hand" />
 		<child link="r_hand_dh_frame" />
 	</joint>
 	<link name="r_hand_thumb_0">
@@ -892,7 +892,7 @@
 	<joint name="r_hand_thumb_0_joint" type="revolute">
 		<origin xyz="-0.0318492127582281 -0.00405679999993591 0.0192026964178796" rpy="0.0880846384483103 -1.32396952212432 2.97584384270403" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand" />
+		<parent link="r_hand" />
 		<child link="r_hand_thumb_0" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -963,7 +963,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="r_hand_thumb_3">
+	<link name="r_hand_thumb_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -992,7 +992,7 @@
 		<origin xyz="0.022 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="r_hand_thumb_2" />
-                <child link="r_hand_thumb_3" />
+		<child link="r_hand_thumb_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -1000,7 +1000,7 @@
 	<joint name="r_hand_thumb_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand_thumb_3" />
+		<parent link="r_hand_thumb_3" />
 		<child link="r_hand_thumb_tip" />
 	</joint>
 	<link name="r_hand_index_0">
@@ -1031,7 +1031,7 @@
 	<joint name="r_hand_index_0_joint" type="revolute">
 		<origin xyz="-0.0525584344285222 0.00514320000012944 0.039473341148855" rpy="1.48159614751736 -2.80851293007006 0.00659385709493776" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand" />
+		<parent link="r_hand" />
 		<child link="r_hand_index_0" />
 		<limit effort="50000" lower="-0.3490658503988659" upper="0.0" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -1102,7 +1102,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="r_hand_index_3">
+	<link name="r_hand_index_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -1131,7 +1131,7 @@
 		<origin xyz="0.022 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="r_hand_index_2" />
-                <child link="r_hand_index_3" />
+		<child link="r_hand_index_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -1139,7 +1139,7 @@
 	<joint name="r_hand_index_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand_index_3" />
+		<parent link="r_hand_index_3" />
 		<child link="r_hand_index_tip" />
 	</joint>
 	<link name="r_hand_middle_0">
@@ -1170,7 +1170,7 @@
 	<joint name="r_hand_middle_0_joint" type="revolute">
 		<origin xyz="-0.057540451023329 0.00604320000004786 0.0237779752515841" rpy="1.57079632679979 -2.87979333376279 2.06501482580279e-13" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand" />
+		<parent link="r_hand" />
 		<child link="r_hand_middle_0" />
 		<limit effort="50000" lower="0.0" upper="0.0" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -1241,7 +1241,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="r_hand_middle_3">
+	<link name="r_hand_middle_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -1270,7 +1270,7 @@
 		<origin xyz="0.024 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="r_hand_middle_2" />
-                <child link="r_hand_middle_3" />
+		<child link="r_hand_middle_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -1278,7 +1278,7 @@
 	<joint name="r_hand_middle_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand_middle_3" />
+		<parent link="r_hand_middle_3" />
 		<child link="r_hand_middle_tip" />
 	</joint>
 	<link name="r_hand_ring_0">
@@ -1309,7 +1309,7 @@
 	<joint name="r_hand_ring_0_joint" type="revolute">
 		<origin xyz="-0.0606910842022157 0.00544319999997171 0.00865822622681494" rpy="-1.54796540941373 -0.154343069643928 3.05377499029501" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand" />
+		<parent link="r_hand" />
 		<child link="r_hand_ring_0" />
 		<limit effort="50000" lower="0.0" upper="0.3490658503988659" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -1380,7 +1380,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="r_hand_ring_3">
+	<link name="r_hand_ring_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -1409,7 +1409,7 @@
 		<origin xyz="0.022 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="r_hand_ring_2" />
-                <child link="r_hand_ring_3" />
+		<child link="r_hand_ring_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -1417,7 +1417,7 @@
 	<joint name="r_hand_ring_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand_ring_3" />
+		<parent link="r_hand_ring_3" />
 		<child link="r_hand_ring_tip" />
 	</joint>
 	<link name="r_hand_little_0">
@@ -1448,7 +1448,7 @@
 	<joint name="r_hand_little_0_joint" type="revolute">
 		<origin xyz="-0.0636290045193172 0.00444319999987861 -0.0101109273025847" rpy="-1.54796540941373 -0.154343069643928 3.05377499029501" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand" />
+		<parent link="r_hand" />
 		<child link="r_hand_little_0" />
 		<limit effort="50000" lower="0.0" upper="0.3490658503988659" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -1519,7 +1519,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="r_hand_little_3">
+	<link name="r_hand_little_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -1548,7 +1548,7 @@
 		<origin xyz="0.019 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="r_hand_little_2" />
-                <child link="r_hand_little_3" />
+		<child link="r_hand_little_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -1556,7 +1556,7 @@
 	<joint name="r_hand_little_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="r_hand_little_3" />
+		<parent link="r_hand_little_3" />
 		<child link="r_hand_little_tip" />
 	</joint>
 	<link name="l_shoulder_1">
@@ -1774,7 +1774,7 @@
 		<limit effort="50000" lower="-1.3962634016" upper="0.436332312999" velocity="50000" />
 		<dynamics damping="1.0" friction="0.0" />
 	</joint>
-        <link name="l_hand">
+	<link name="l_hand">
 		<inertial>
 			<origin xyz="0.0647680204057 0.0056304 0.0226602208449" rpy="0 0 0" />
 			<mass value="0.247806" />
@@ -1809,7 +1809,7 @@
 		<origin xyz="-0.000634106499644 -0.0194999 0.00236651831751" rpy="0 0 0" />
 		<axis xyz="-2.22044604925e-16 1.0 0.0" />
 		<parent link="l_wrist_1" />
-                <child link="l_hand" />
+		<child link="l_hand" />
 		<limit effort="50000" lower="-0.349065850399" upper="0.436332312999" velocity="50000" />
 		<dynamics damping="1.0" friction="0.0" />
 	</joint>
@@ -1817,7 +1817,7 @@
 	<joint name="l_hand_dh_frame_fixed_joint" type="fixed">
 		<origin xyz="0.0576542978428 -0.0055568 0.0136938323083" rpy="-1.57079632679 -0.261799319827 0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand" />
+		<parent link="l_hand" />
 		<child link="l_hand_dh_frame" />
 	</joint>
 	<link name="l_hand_thumb_0">
@@ -1848,7 +1848,7 @@
 	<joint name="l_hand_thumb_0_joint" type="revolute">
 		<origin xyz="0.031849212758224 -0.00405680000005876 0.0192026964178938" rpy="3.05350801517967 -1.32396952212588 0.16574881085148" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand" />
+		<parent link="l_hand" />
 		<child link="l_hand_thumb_0" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -1919,7 +1919,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="l_hand_thumb_3">
+	<link name="l_hand_thumb_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -1948,7 +1948,7 @@
 		<origin xyz="0.022 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="l_hand_thumb_2" />
-                <child link="l_hand_thumb_3" />
+		<child link="l_hand_thumb_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -1956,7 +1956,7 @@
 	<joint name="l_hand_thumb_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand_thumb_3" />
+		<parent link="l_hand_thumb_3" />
 		<child link="l_hand_thumb_tip" />
 	</joint>
 	<link name="l_hand_index_0">
@@ -1987,7 +1987,7 @@
 	<joint name="l_hand_index_0_joint" type="revolute">
 		<origin xyz="0.0525584344284928 0.00514319999987161 0.0394733411489562" rpy="-1.48159614750735 -2.80851293007012 3.13499879649432" />
 		<axis xyz="0.0 0.0 -1.0" />
-                <parent link="l_hand" />
+		<parent link="l_hand" />
 		<child link="l_hand_index_0" />
 		<limit effort="50000" lower="-0.3490658503988659" upper="0.0" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -2058,7 +2058,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="l_hand_index_3">
+	<link name="l_hand_index_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -2087,7 +2087,7 @@
 		<origin xyz="0.022 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="l_hand_index_2" />
-                <child link="l_hand_index_3" />
+		<child link="l_hand_index_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -2095,7 +2095,7 @@
 	<joint name="l_hand_index_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand_index_3" />
+		<parent link="l_hand_index_3" />
 		<child link="l_hand_index_tip" />
 	</joint>
 	<link name="l_hand_middle_0">
@@ -2123,7 +2123,7 @@
 	<joint name="l_hand_middle_0_joint" type="revolute">
 		<origin xyz="0.0575404510232972 0.00604319999995216 0.0237779752516938" rpy="1.57079632679979 -0.261799319827 3.43740493372924e-17" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand" />
+		<parent link="l_hand" />
 		<child link="l_hand_middle_0" />
 		<limit effort="50000" lower="0.0" upper="0.3490658503988659" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -2194,7 +2194,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="l_hand_middle_3">
+	<link name="l_hand_middle_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -2223,7 +2223,7 @@
 		<origin xyz="0.024 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="l_hand_middle_2" />
-                <child link="l_hand_middle_3" />
+		<child link="l_hand_middle_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -2231,7 +2231,7 @@
 	<joint name="l_hand_middle_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand_middle_3" />
+		<parent link="l_hand_middle_3" />
 		<child link="l_hand_middle_tip" />
 	</joint>
 	<link name="l_hand_ring_0">
@@ -2262,7 +2262,7 @@
 	<joint name="l_hand_ring_0_joint" type="revolute">
 		<origin xyz="0.0606910842021855 0.00544320000002766 0.00865822622691899" rpy="-1.54796540941373 -2.98724958394586 3.05377499029481" />
 		<axis xyz="0.0 0.0 -1.0" />
-                <parent link="l_hand" />
+		<parent link="l_hand" />
 		<child link="l_hand_ring_0" />
 		<limit effort="50000" lower="0.0" upper="0.3490658503988659" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -2333,7 +2333,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="l_hand_ring_3">
+	<link name="l_hand_ring_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -2362,7 +2362,7 @@
 		<origin xyz="0.022 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="l_hand_ring_2" />
-                <child link="l_hand_ring_3" />
+		<child link="l_hand_ring_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -2370,7 +2370,7 @@
 	<joint name="l_hand_ring_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand_ring_3" />
+		<parent link="l_hand_ring_3" />
 		<child link="l_hand_ring_tip" />
 	</joint>
 	<link name="l_hand_little_0">
@@ -2401,7 +2401,7 @@
 	<joint name="l_hand_little_0_joint" type="revolute">
 		<origin xyz="0.0636290045192898 0.00444320000012016 -0.0101109273024901" rpy="-1.54796540941373 -2.98724958394586 3.05377499029481" />
 		<axis xyz="0.0 0.0 -1.0" />
-                <parent link="l_hand" />
+		<parent link="l_hand" />
 		<child link="l_hand_little_0" />
 		<limit effort="50000" lower="0.0" upper="0.3490658503988659" velocity="50000" />
 		<dynamics friction="0.0" />
@@ -2472,7 +2472,7 @@
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
-        <link name="l_hand_little_3">
+	<link name="l_hand_little_3">
 		<inertial>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
 			<mass value="0.01" />
@@ -2501,7 +2501,7 @@
 		<origin xyz="0.019 0.0 0.0" rpy="0.0 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
 		<parent link="l_hand_little_2" />
-                <child link="l_hand_little_3" />
+		<child link="l_hand_little_3" />
 		<limit effort="50000" lower="0.0" upper="1.5707963267948966" velocity="50000" />
 		<dynamics friction="0.0" />
 	</joint>
@@ -2509,7 +2509,7 @@
 	<joint name="l_hand_little_tip_joint" type="fixed">
 		<origin xyz="0.0168 0.0 0.0" rpy="-1.5707963267948966 0.0 0.0" />
 		<axis xyz="0.0 0.0 1.0" />
-                <parent link="l_hand_little_3" />
+		<parent link="l_hand_little_3" />
 		<child link="l_hand_little_tip" />
 	</joint>
 	<link name="neck_1">
@@ -3107,269 +3107,317 @@
 			1
 		</implicitSpringDamper>
 	</gazebo>
-        <gazebo reference="r_hand">
-                <collision name='r_hand_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='r_hand_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>r_hand_collision</collision>
-		      	</contact>
-            	</sensor>
-        </gazebo>
-        <gazebo reference="r_hand_thumb_3">
-		<collision name='r_hand_thumb_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='r_hand_thumb_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>r_hand_thumb_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="r_hand">
+		<collision name="r_hand_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="r_hand_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					r_hand_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="r_hand_index_3">
-		<collision name='r_hand_index_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='r_hand_index_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>r_hand_index_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="r_hand_thumb_3">
+		<collision name="r_hand_thumb_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="r_hand_thumb_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					r_hand_thumb_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="r_hand_middle_3">
-		<collision name='r_hand_middle_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='r_hand_middle_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>r_hand_middle_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="r_hand_index_3">
+		<collision name="r_hand_index_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="r_hand_index_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					r_hand_index_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="r_hand_ring_3">
-		<collision name='r_hand_ring_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='r_hand_ring_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>r_hand_ring_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="r_hand_middle_3">
+		<collision name="r_hand_middle_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="r_hand_middle_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					r_hand_middle_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="r_hand_little_3">
-		<collision name='r_hand_little_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='r_hand_little_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>r_hand_little_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="r_hand_ring_3">
+		<collision name="r_hand_ring_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="r_hand_ring_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					r_hand_ring_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="l_hand">
-                <collision name='l_hand_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='l_hand_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>l_hand_collision</collision>
-		      	</contact>
-            	</sensor>
-        </gazebo>
-        <gazebo reference="l_hand_thumb_3">
-		<collision name='l_hand_thumb_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='l_hand_thumb_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>l_hand_thumb_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="r_hand_little_3">
+		<collision name="r_hand_little_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="r_hand_little_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					r_hand_little_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="l_hand_index_3">
-		<collision name='l_hand_index_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='l_hand_index_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>l_hand_index_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="l_hand">
+		<collision name="l_hand_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="l_hand_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					l_hand_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="l_hand_middle_3">
-		<collision name='l_hand_middle_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='l_hand_middle_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>l_hand_middle_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="l_hand_thumb_3">
+		<collision name="l_hand_thumb_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="l_hand_thumb_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					l_hand_thumb_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="l_hand_ring_3">
-		<collision name='l_hand_ring_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='l_hand_ring_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>l_hand_ring_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="l_hand_index_3">
+		<collision name="l_hand_index_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="l_hand_index_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					l_hand_index_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
-        <gazebo reference="l_hand_little_3">
-		<collision name='l_hand_little_3_collision'>
-                        <surface>
-                                <friction>
-                                        <ode>
-                                                <mu>
-                                                        5.0
-                                                </mu>
-                                                <mu2>
-                                                        5.0
-                                                </mu2>
-                                        </ode>
-                                </friction>
-                        </surface>
-                </collision>
-		<sensor name='l_hand_little_3_contact_sensor' type='contact'>
-              		<update_rate>30</update_rate>
-		      	<contact>
-		        	<collision>l_hand_little_3_collision</collision>
-		      	</contact>
-            	</sensor>
+	<gazebo reference="l_hand_middle_3">
+		<collision name="l_hand_middle_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="l_hand_middle_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					l_hand_middle_3_collision
+				</collision>
+			</contact>
+		</sensor>
+	</gazebo>
+	<gazebo reference="l_hand_ring_3">
+		<collision name="l_hand_ring_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="l_hand_ring_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					l_hand_ring_3_collision
+				</collision>
+			</contact>
+		</sensor>
+	</gazebo>
+	<gazebo reference="l_hand_little_3">
+		<collision name="l_hand_little_3_collision">
+			<surface>
+				<friction>
+					<ode>
+						<mu>
+							5.0
+						</mu>
+						<mu2>
+							5.0
+						</mu2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		<sensor name="l_hand_little_3_contact_sensor" type="contact">
+			<update_rate>
+				30
+			</update_rate>
+			<contact>
+				<collision>
+					l_hand_little_3_collision
+				</collision>
+			</contact>
+		</sensor>
 	</gazebo>
 	<gazebo>
 		<plugin name="left_hand_finger_tips_skin" filename="libgazebo_yarp_skin.so">
