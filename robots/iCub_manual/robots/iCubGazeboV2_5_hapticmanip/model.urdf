@@ -2826,6 +2826,12 @@
 		</fdir1>
 	</gazebo>
 	<gazebo>
+	<!-- this plugin is not installed! -->
+		<plugin name="pose_publisher" filename="libgazebo_yarp_modelposepublisher.so">
+			<period>
+				0.01
+			</period>
+		</plugin>
 		<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
 				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_torso.ini
