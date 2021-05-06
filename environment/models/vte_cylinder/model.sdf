@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+
+<sdf version="1.5">
+  <model name='vte_cylinder'>
+    <link name='vte_cylinder_root_link'>
+      <!-- The origin of the mesh is at approx 0.0932 from the bottom of the bottle -->
+      <pose>0 0 0.015 0 0 0</pose>
+      <inertial>
+	<!-- CoM evaluated using Meshlab assuming a homogeneous body-->
+	<!-- expressed w.r.t. the origin of the mesh -->
+	<pose>0.0 0.00015 0.0 0 0 0</pose>	
+        <mass>0.5</mass>
+        <inertia>
+	  <!-- Obtained from Meshlab -->
+          <ixx>0.000005</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0000001</ixz>
+          <iyy>0.0</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.000005</izz>
+        </inertia>
+      </inertial>
+      <collision name='vte_cylinder_collision'>
+        <geometry>
+          <mesh><uri>model://vte_cylinder/cylinder.stl</uri></mesh>
+        </geometry>
+	<surface>
+          <friction>
+            <ode>
+              <mu>0.9</mu>
+              <mu2>0.9</mu2>
+            </ode>
+          </friction>
+	</surface>
+      </collision>
+      <visual name='vte_cylinder_visual'>
+        <geometry>
+          <mesh><uri>model://vte_cylinder/cylinder.dae</uri></mesh>
+        </geometry>
+        <material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Orange</name>
+	  </script>
+        </material>
+      </visual>
+    </link>
+    <plugin name="pose_publisher" filename='libgazebo_yarp_modelposepublisher.so'>
+      <period>0.01</period>
+    </plugin>
+  </model>
+</sdf>

@@ -2834,37 +2834,37 @@
 		</plugin>
 		<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_torso.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_torso.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_head.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_head.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_left_hand_thumb" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_thumb.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_thumb.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_left_hand_index" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_index.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_index.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_left_hand_middle" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_middle.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_middle.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_left_hand_pinky" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_pinky.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_pinky.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_left_hand_finger" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_finger.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_finger.ini
 			</yarpConfigurationFile>
 			<initialConfiguration>
 				1.0471975511965976
@@ -2872,7 +2872,7 @@
 		</plugin>
 		<plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf/gazebo_icub_left_arm_no_hand.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_arm_no_hand.ini
 			</yarpConfigurationFile>
 			<initialConfiguration>
 				-0.52 0.52 0 0.785 0 0 0.0
@@ -2880,32 +2880,32 @@
 		</plugin>
 		<plugin name="controlboard_left_arm" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf/gazebo_icub_left_arm.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_arm.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_right_hand_thumb" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_thumb.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_thumb.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_right_hand_index" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_index.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_index.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_right_hand_middle" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_middle.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_middle.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_right_hand_pinky" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_pinky.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_pinky.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="controlboard_right_hand_finger" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_finger.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_finger.ini
 			</yarpConfigurationFile>
 			<initialConfiguration>
 				1.0471975511965976
@@ -2913,7 +2913,7 @@
 		</plugin>
 		<plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf/gazebo_icub_right_arm_no_hand.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_arm_no_hand.ini
 			</yarpConfigurationFile>
 			<initialConfiguration>
 				-0.52 0.52 0 0.785 0 0 0.0
@@ -2921,17 +2921,17 @@
 		</plugin>
 		<plugin name="controlboard_right_arm" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>
-				model://iCub/conf/gazebo_icub_right_arm.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_arm.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="mais_left_hand" filename="libgazebo_yarp_maissensor.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_mais.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_mais.ini
 			</yarpConfigurationFile>
 		</plugin>
 		<plugin name="mais_right_hand" filename="libgazebo_yarp_maissensor.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_mais.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_mais.ini
 			</yarpConfigurationFile>
 		</plugin>
 	</gazebo>
@@ -2948,7 +2948,7 @@
 			</pose>
 			<plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
 				<yarpConfigurationFile>
-					model://iCub/conf/gazebo_icub_inertial.ini
+					model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_inertial.ini
 				</yarpConfigurationFile>
 			</plugin>
 		</sensor>
@@ -3428,7 +3428,7 @@
 	<gazebo>
 		<plugin name="left_hand_finger_tips_skin" filename="libgazebo_yarp_skin.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_finger_tips_contact_sensors.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_hand_finger_tips_contact_sensors.ini
 			</yarpConfigurationFile>
 			<robotName>
 				icubSim
@@ -3470,7 +3470,7 @@
 	<gazebo>
 		<plugin name="right_hand_finger_tips_skin" filename="libgazebo_yarp_skin.so">
 			<yarpConfigurationFile>
-				model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_finger_tips_contact_sensors.ini
+				model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_finger_tips_contact_sensors.ini
 			</yarpConfigurationFile>
 			<robotName>
 				icubSim
@@ -3585,7 +3585,7 @@
 			</visualize>
 			<plugin filename="libgazebo_yarp_depthCamera.so" name="left_camera_depth_plugin">
 				<yarpConfigurationFile>
-					model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_depth_camera.ini
+					model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_left_depth_camera.ini
 				</yarpConfigurationFile>
 			</plugin>
 		</sensor>
@@ -3629,7 +3629,7 @@
 			</visualize>
 			<plugin filename="libgazebo_yarp_camera.so" name="right_camera_plugin">
 				<yarpConfigurationFile>
-					model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_rgb_camera.ini
+					model://iCub_manual/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_rgb_camera.ini
 				</yarpConfigurationFile>
 			</plugin>
 		</sensor>
