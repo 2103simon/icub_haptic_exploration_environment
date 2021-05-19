@@ -16,23 +16,30 @@ The skin at the fingertip is not the same as the one at the palm. Both are using
 git clone https://github.com/2103simon/haptic_exploration.git
 cd haptic_exploration
 mkdir build && cd build
-cmake -DCMAKE_PREFIX_PATH=<installation_path> ../ (e.g. path_to_robotology/robotology/build/install)
+cmake -DCMAKE_PREFIX_PATH=<installation_path> ../
 make install
 ```
 
 then make sure that `GAZEBO_PLUGIN_PATH` contains `<installation_path>/lib`.
 
-### How to use
-open 4 terminals and run following commands:
+### How to run
+
+first run in two seperate terminals
 ```
 yarpserver --write
 yarpdev --device transformServer --ROS::enable_ros_publisher false --ROS::enable_ros_subscriber false
+```
+
+now you can start the haptic exploration environment with
+```
 gazebo $ROBOTOLOGY_SUPERBUILD_INSTALL_PREFIX/share/gazebo/worlds/vte_scenario.sdf
 ```
-to control the robot run:
+
+the joints can be controlled using the yarpmotorgui
 ```
 yarpmotorgui --robot icubSim
 ```
+
 ### Force to area distribution
 
 Because [`gazebo`](http://gazebosim.org/) (with the [`contact sensor plugin`](http://gazebosim.org/tutorials?tut=contact_sensor)) only provides point contact, and no surface deformation, the force to area distribution has to be calculated mathematically. The calculation of the force measured by the single taxels is based on a gaussian force to area distribution, whereas the area depends on the contact force. 
@@ -55,11 +62,7 @@ Further, the relationship is defined by the following two parameters:
 
 One can read the output of the above-mentioned port from the command line using the following command:
 
-```
-yarpmotorgui --robot icubSim
-yarp read ... /right_hand/skinManager/skin_events:o
-yarp read ... /left_hand/skinManager/skin_events:o
-```
+`yarp read ... /skinManager/skin_events:o`
 
 Every skinContactList is represented with the following format: (SKIN_CONTACT_VECTOR_1) ... (SKIN_CONTACT_VECTOR_N). There are as many SKIN_CONTACT_VECTORs as there were (clusters of) contacts detected on the whole skin of the robot by the skinManager. If case of no contact, the skinContactList is empty. If there was contact, every SKIN_CONTACT_VECTOR is enclosed by brackets and has the following format: ((contactId bodyPartId linkNumber skinPart) (centerOfPressure_x cOP_y cOP_z) (force_x f_y f_z) (moment_x m_y m_z) (geometricCenter_x gC_y gC_z) (surfaceNormalDirection_x sND_y sND_z) (activatedTaxelId1 aTId2 .. aTIdN) average_pressure). Here more information on some of the data:
 - bodyPart: the part of the body (TORSO=1, HEAD=2, LEFT_ARM=3, RIGHT_ARM=4, LEFT_LEG=5, RIGHT_LEG=6)
