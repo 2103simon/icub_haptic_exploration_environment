@@ -2885,6 +2885,11 @@
 		<plugin name='mais_right_hand' filename='libgazebo_yarp_maissensor.so'>
 			<yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_hapticmanip/gazebo_icub_right_hand_mais.ini</yarpConfigurationFile>
 		</plugin>
+		<plugin name="pose_publisher" filename="libgazebo_yarp_modelposepublisher.so">
+			<period>
+				0.01
+			</period>
+		</plugin>
 	</gazebo>
 	<gazebo reference="head">
 		<sensor name="head_imu_acc_1x1" type="imu">

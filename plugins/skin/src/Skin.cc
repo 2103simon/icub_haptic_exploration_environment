@@ -451,7 +451,7 @@ namespace gazebo
 
                 // calculate the contact position at the fingertip
                 ignition::math::Pose3d cont_tip = point - link_coord;
-                std::cout << "contact in Link Coordinates:" <<std::endl;
+                std::cout << "contact in Link Coordinates:" << std::endl;
                 std::cout << cont_tip << std::endl;
 
                 // normal
