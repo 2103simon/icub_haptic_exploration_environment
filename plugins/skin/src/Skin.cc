@@ -429,7 +429,7 @@ namespace gazebo
                 continue;
 
             // get pointer to the link
-            gazebo::physics::LinkPtr link_name_ptr = m_model->GetLink("iCub::iCub::" + m_whichHand + "::" + linksLocalNames[i]);
+            gazebo::physics::LinkPtr link_name_ptr = m_model->GetLink("iCub::iCub::" + linksLocalNames[i]);
             std::cout << "linkLocalNames[i]:" << linksLocalNames[i] << std::endl;
 
             // get link coordinates by using the pointer to the model
@@ -450,13 +450,8 @@ namespace gazebo
 
                 // calculate the contact position at the fingertip
                 ignition::math::Pose3d cont_tip = point - link_coord;
-<<<<<<< HEAD
                 std::cout << "contact in Link Coordinates:" << std::endl;
                 std::cout << cont_tip << std::endl;
-=======
-                // std::cout << "contact in Link Coordinates:" <<std::endl;
-                // std::cout << cont_tip << std::endl;
->>>>>>> parent of 9da75d9 (included correct naming of parts and working taxel descimination)
 
                 // normal
                 yarp::sig::Vector normVector(3, 0.0);
@@ -479,7 +474,7 @@ namespace gazebo
                 double max_val_gau = 0;
 
                 // compute taxel in contact
-                if (linksLocalNames[i] == "r_hand_base_link" || linksLocalNames[i] == "l_hand_base_link")
+                if (linksLocalNames[i] == "r_hand" || linksLocalNames[i] == "l_hand")
                 {
                     // calc sigma for palm
                     // std::cout << "calc sigma for palm!" << std::endl;
@@ -506,9 +501,9 @@ namespace gazebo
                         // std::cout << "sigma: " << sigma << std::endl;
                     }
                     // safe max val of gaussian for normalization
-                    for (size_t i = 0; i < number_increments_lengths; i++)
+                    for (size_t l = 0; l < number_increments_lengths; l++)
                     {
-                        double palm_lengths = -dist_th_palm + i * (2 * dist_th_palm / number_increments_lengths);
+                        double palm_lengths = -dist_th_palm + l * (2 * dist_th_palm / number_increments_lengths);
                         // check if assigning a new variable is faster then to do the computation twice (memory vs. speed)
                         if (exp(-(pow(palm_lengths, 2) / pow(2 * sigma, 2))) > max_val_gau)
                         {
@@ -614,9 +609,9 @@ namespace gazebo
                         // std::cout << "sigma: " << sigma << std::endl;
                     }
                     // safe max val of gaussian for normalization
-                    for (size_t i = 0; i < number_increments_lengths; i++)
+                    for (size_t l = 0; l < number_increments_lengths; l++)
                     {
-                        double finger_lengths = -dist_th_finger + i * (2 * dist_th_finger / number_increments_lengths);
+                        double finger_lengths = -dist_th_finger + l * (2 * dist_th_finger / number_increments_lengths);
                         if (exp(-(pow(finger_lengths, 2) / pow(2 * sigma, 2))) > max_val_gau)
                         {
                             max_val_gau = exp(-(pow(finger_lengths, 2) / pow(2 * sigma, 2)));
