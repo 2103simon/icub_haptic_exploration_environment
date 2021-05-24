@@ -38,7 +38,7 @@ target_include_directories(${PLUGIN_TARGET_NAME}
 target_link_libraries(${PLUGIN_TARGET_NAME}
                       PRIVATE
                       GazeboYARPPlugins::gazebo_yarp_singleton
-		      ICUB::skinDynLib
+		              ICUB::skinDynLib
                       ${GAZEBO_LIBRARIES}
 )
 
