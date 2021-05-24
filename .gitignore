@@ -1,2 +1,4 @@
 build/*
-!build/
+CMakeLists.txt.user
+plugins/CMakeLists.txt.user
+plugins/skin/CMakeLists.txt.user
