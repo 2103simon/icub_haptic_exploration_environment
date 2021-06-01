@@ -41,9 +41,10 @@ target_link_libraries(${PLUGIN_TARGET_NAME}
 		              ICUB::skinDynLib
                       ${GAZEBO_LIBRARIES}
 )
-
+set_target_properties(${PLUGIN_TARGET_NAME} PROPERTIES PUBLIC_HEADER "include/gazebo/Skin.hh")
 install(TARGETS ${PLUGIN_TARGET_NAME}
         LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT shlib
+		PUBLIC_HEADER DESTINATION include/gazebo
  )
 
 # Add standard uninstall target
