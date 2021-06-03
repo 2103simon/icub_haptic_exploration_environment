@@ -42,10 +42,10 @@ target_link_libraries(${PLUGIN_TARGET_NAME}
                       ${GAZEBO_LIBRARIES}
 )
 
-message(${PROJECT_SOURCE_DIR})
+set_target_properties(${PLUGIN_TARGET_NAME} PROPERTIES PUBLIC_HEADER "include/gazebo/Skin.hh")
 install(TARGETS ${PLUGIN_TARGET_NAME}
         LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT shlib
-        
+		PUBLIC_HEADER DESTINATION include/gazebo
  )
 install (DIRECTORY ${PROJECT_SOURCE_DIR}/plugins/skin/include/
     DESTINATION include
