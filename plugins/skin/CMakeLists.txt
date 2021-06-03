@@ -42,9 +42,14 @@ target_link_libraries(${PLUGIN_TARGET_NAME}
                       ${GAZEBO_LIBRARIES}
 )
 
+message(${PROJECT_SOURCE_DIR})
 install(TARGETS ${PLUGIN_TARGET_NAME}
         LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT shlib
+        
  )
-
+install (DIRECTORY ${PROJECT_SOURCE_DIR}/plugins/skin/include/
+    DESTINATION include
+    FILES_MATCHING PATTERN "*.h*")
+    
 # Add standard uninstall target
 include(AddUninstallTarget)
