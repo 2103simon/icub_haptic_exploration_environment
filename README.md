@@ -32,7 +32,7 @@ yarpdev --device transformServer --ROS::enable_ros_publisher false --ROS::enable
 
 now you can start the haptic exploration environment with
 ```
-gazebo $ROBOTOLOGY_SUPERBUILD_INSTALL_PREFIX/share/gazebo/worlds/vte_scenario.sdf
+gazebo $ROBOTOLOGY_SUPERBUILD_INSTALL_PREFIX/share/gazebo/worlds/he_scenario.sdf
 ```
 
 the joints can be controlled using the yarpmotorgui

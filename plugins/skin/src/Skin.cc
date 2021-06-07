@@ -659,6 +659,10 @@ namespace gazebo
                         }
                         else
                         {
+                            /* code */
+                        }
+
+                        {
                             if (force_tax > force_th_finger)
                             {
                                 std::cout << "force at taxel: " << force_tax << " "

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+
+<sdf version="1.5">
+  <model name='he_cylinder'>
+    <link name='he_cylinder_root_link'>
+      <!-- The origin of the mesh is at approx 0.0932 from the bottom of the bottle -->
+      <pose>0 0 0.015 0 0 0</pose>
+      <inertial>
+	<!-- CoM evaluated using Meshlab assuming a homogeneous body-->
+	<!-- expressed w.r.t. the origin of the mesh -->
+	<pose>0.0 0.015 0.0 0 0 0</pose>	
+        <mass>0.5</mass>
+        <inertia>
+	  <!-- Obtained from Meshlab -->
+          <ixx>0.000005</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0000001</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.000005</izz>
+        </inertia>
+      </inertial>
+      <collision name='he_cylinder_collision'>
+        <geometry>
+          <mesh><uri>model://he_cylinder/cylinder.stl</uri></mesh>
+        </geometry>
+	<surface>
+          <friction>
+            <ode>
+              <mu>0.9</mu>
+              <mu2>0.9</mu2>
+            </ode>
+          </friction>
+	</surface>
+      </collision>
+      <visual name='he_cylinder_visual'>
+        <geometry>
+          <mesh><uri>model://he_cylinder/cylinder.dae</uri></mesh>
+        </geometry>
+        <material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Orange</name>
+	  </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

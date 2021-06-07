@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+
+<sdf version="1.5">
+  <model name='infinity_2d'>
+    <link name='infinity_2d_root_link'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+	<!-- CoM -->
+	<pose>0.0 0.0 0.0</pose>	
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.001338055168</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.001343362176</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.002674488832</izz>
+        </inertia>
+      </inertial>
+      <collision name='infinity_2d_collision'>
+        <geometry>
+          <mesh><uri>model://cf_infinity_2d/infinity_2d.stl</uri></mesh>
+        </geometry>
+	<surface>
+          <friction>
+            <ode>
+              <mu>0.1</mu>
+              <mu2>0.1</mu2>
+            </ode>
+          </friction>
+	</surface>
+      </collision>
+      <visual name='infinity_2d_visual'>
+        <geometry>
+          <mesh><uri>model://cf_infinity_2d/infinity_2d.dae</uri></mesh>
+        </geometry>
+        <material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Orange</name>
+	  </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -9,12 +9,24 @@ cmake_minimum_required(VERSION 3.5)
 
 project(haptic_exploration)
 
-install (DIRECTORY models/vte_box DESTINATION share/gazebo/models)
-install (DIRECTORY models/vte_shelf DESTINATION share/gazebo/models)
-install (DIRECTORY models/vte_table DESTINATION share/gazebo/models)
-install (DIRECTORY models/vte_mustard DESTINATION share/gazebo/models)
+install (DIRECTORY models/haptic_exploration/he_box DESTINATION share/gazebo/models)
+install (DIRECTORY models/haptic_exploration/he_shelf DESTINATION share/gazebo/models)
+install (DIRECTORY models/haptic_exploration/he_table DESTINATION share/gazebo/models)
+install (DIRECTORY models/haptic_exploration/he_mustard DESTINATION share/gazebo/models)
+install (DIRECTORY models/haptic_exploration/he_cylinder DESTINATION share/gazebo/models)
 
-install (FILES worlds/vte_scenario.sdf DESTINATION share/gazebo/worlds)
+install (DIRECTORY models/contour_following/cf_triangle_3d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_triangle_2d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_circle_3d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_circle_2d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_square_3d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_square_2d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_star_3d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_star_2d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_infinity_3d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_infinity_2d DESTINATION share/gazebo/models)
+
+install (FILES worlds/he_scenario.sdf DESTINATION share/gazebo/worlds)
 
 # Add standard uninstall target
 include(AddUninstallTarget)
