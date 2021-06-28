@@ -2,25 +2,25 @@
 
 
 <sdf version="1.5">
-  <model name='triangle_3d'>
-    <link name='triangle_3d_root_link'>
+  <model name='infinity_2_5d'>
+    <link name='infinity_2_5d_root_link'>
       <pose>0 0 0 0 0 0</pose>
       <inertial>
 	<!-- CoM -->
 	<pose>0.0 0.0 0.0</pose>	
         <mass>0.2</mass>
         <inertia>
-          <ixx>0.001339383424</ixx>
+          <ixx>0.001341278976</ixx>
           <ixy>0.0</ixy>
           <ixz>0.0</ixz>
-          <iyy>0.001339383424</iyy>
+          <iyy>0.001352227712</iyy>
           <iyz>0.0</iyz>
-          <izz>0.002671886080</izz>
+          <izz>0.002684846592</izz>
         </inertia>
       </inertial>
-      <collision name='triangle_3d_collision'>
+      <collision name='infinity_2_5d_collision'>
         <geometry>
-          <mesh><uri>model://cf_triangle_3d/triangle_3d.stl</uri></mesh>
+          <mesh><uri>model://cf_infinity_2_5d/infinity_2_5d.stl</uri></mesh>
         </geometry>
 	<surface>
           <friction>
@@ -31,9 +31,9 @@
           </friction>
 	</surface>
       </collision>
-      <visual name='triangle_3d_visual'>
+      <visual name='infinity_2_5d_visual'>
         <geometry>
-          <mesh><uri>model://cf_triangle_3d/triangle_3d.dae</uri></mesh>
+          <mesh><uri>model://cf_infinity_2_5d/infinity_2_5d.dae</uri></mesh>
         </geometry>
         <material>
 	  <script>

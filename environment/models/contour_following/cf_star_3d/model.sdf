@@ -10,12 +10,12 @@
 	<pose>0.0 0.0 0.0</pose>	
         <mass>0.2</mass>
         <inertia>
-          <ixx>0.001359673088</ixx>
+          <ixx>0.001342791040</ixx>
           <ixy>0.0</ixy>
           <ixz>0.0</ixz>
-          <iyy>0.001359673088</iyy>
+          <iyy>0.001342791040</iyy>
           <iyz>0.0</iyz>
-          <izz>0.002710068224</izz>
+          <izz>0.002678640128</izz>
         </inertia>
       </inertial>
       <collision name='star_3d_collision'>
