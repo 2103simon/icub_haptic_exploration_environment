@@ -33,18 +33,25 @@
 				0.359608 0 0.38 0 0 -1.57
 			</pose>
 		</include>
-		<!-- Book -->
-		<include>
-			<uri>
-				model://he_box
-			</uri>
-			<!-- Put the model frame on top of the shelf -->
-			<!-- Warning: The z coordinate should be changed if table_alt/model.sdf -->
-			<!-- or shelf_alt/model.sdf changes -->
-			<pose>
-				0.4 0.0 0.55 0 0 -0.97
-			</pose>
-		</include>
+        <!-- Item to be followed -->
+        <model name="to_be_followed">
+        <include>
+            <uri>
+                model://cf_circle_2d
+            </uri>
+            <pose>
+                0.3 0.0 0.5 0.0 0.0 0.0
+            </pose>
+        </include>
+        <joint name="tbf_fixed_joint" type="fixed">
+          <parent>
+            world
+          </parent>
+          <child>
+            to_be_followed::circle_2d::circle_2d_root_link
+          </child>
+        </joint>
+        </model>
 		<!-- iCub with hands and fixed -->
 		<model name="iCub">
 			<include>
