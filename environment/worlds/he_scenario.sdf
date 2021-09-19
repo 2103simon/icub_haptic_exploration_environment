@@ -37,7 +37,7 @@
         <model name="to_be_followed">
         <include>
             <uri>
-                model://cf_circle_2d
+                model://cf_line_2d
             </uri>
             <pose>
                 0.3 0.0 0.5 0.0 0.0 0.0
@@ -48,7 +48,7 @@
             world
           </parent>
           <child>
-            to_be_followed::circle_2d::circle_2d_root_link
+            to_be_followed::line_2d::line_2d_root_link
           </child>
         </joint>
         </model>
