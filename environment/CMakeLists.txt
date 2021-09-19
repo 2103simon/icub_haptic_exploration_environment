@@ -30,6 +30,8 @@ install (DIRECTORY models/contour_following/cf_star_2d DESTINATION share/gazebo/
 install (DIRECTORY models/contour_following/cf_infinity_3d DESTINATION share/gazebo/models)
 install (DIRECTORY models/contour_following/cf_infinity_2_5d DESTINATION share/gazebo/models)
 install (DIRECTORY models/contour_following/cf_infinity_2d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_line_2_5d DESTINATION share/gazebo/models)
+install (DIRECTORY models/contour_following/cf_line_2d DESTINATION share/gazebo/models)
 
 install (FILES worlds/he_scenario.sdf DESTINATION share/gazebo/worlds)
 
