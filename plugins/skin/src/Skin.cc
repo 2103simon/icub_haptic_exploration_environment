@@ -419,6 +419,7 @@ namespace gazebo
         iCub::skinDynLib::skinContactList &skinContactList = m_portSkin.prepare();
         skinContactList.clear();
 
+        // every fingertip is taken as a single contact sensor
         for (size_t i = 0; i < m_contactSensors.size(); i++)
         {
             ContactSensor &sensor = m_contactSensors[i];
@@ -551,6 +552,8 @@ namespace gazebo
                         }
                         else
                         {
+                            // TODO: store them and use the sum of multiple contacts
+                            // move one loop out
                             if (force_tax > force_th_palm)
                             {
                                 std::cout << "force at taxel: " << force_tax << " "
