@@ -533,8 +533,8 @@ namespace gazebo
 
                         if (event_driven)
                         {
-                            auto delta_force = force_tax - taxel_placement_palm.at(linksLocalNames[i])[3][m];
-                            taxel_placement_palm.at(linksLocalNames[i])[3][m] = force_tax;
+                            auto delta_force = force_tax - taxel_placement_palm.at(linksLocalNames[i])[5][m];
+                            taxel_placement_palm.at(linksLocalNames[i])[5][m] = force_tax;
                             if (delta_force > delta_force_th_palm)
                             {
                                 // calc # spikes
@@ -556,6 +556,10 @@ namespace gazebo
                             // move one loop out
                             if (force_tax > force_th_palm)
                             {
+                                // write force_tax to variable at position taxelId_link
+                                // taxel_placement_palm.at(linksLocalNames[i])[4][m] = taxel_placement_palm.at(linksLocalNames[i])[4][m] + force_tax;
+
+                                // old code:
                                 std::cout << "force at taxel: " << force_tax << " "
                                           << "taxelID: " << taxelId_link << std::endl;
                                 publish_data = true;
@@ -643,8 +647,8 @@ namespace gazebo
 
                         if (event_driven)
                         {
-                            auto delta_force = force_tax - taxel_placement_finger.at(linksLocalNames[i])[4][m];
-                            taxel_placement_finger.at(linksLocalNames[i])[4][m] = force_tax;
+                            auto delta_force = force_tax - taxel_placement_finger.at(linksLocalNames[i])[5][m];
+                            taxel_placement_finger.at(linksLocalNames[i])[5][m] = force_tax;
                             if (delta_force > delta_force_th_finger)
                             {
                                 // calc # spikes
