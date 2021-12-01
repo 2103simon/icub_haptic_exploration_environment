@@ -16,7 +16,7 @@ The skin at the fingertip is not the same as the one at the palm. Both are using
 git clone https://github.com/2103simon/haptic_exploration.git
 cd haptic_exploration
 mkdir build && cd build
-cmake -DCMAKE_PREFIX_PATH=<installation_path> ../
+cmake -DCMAKE_PREFIX_PATH=<installation_path> ../ (install to robotlogy-superbuild/build/install)
 make install
 ```
 

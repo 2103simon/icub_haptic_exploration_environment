@@ -438,6 +438,7 @@ namespace gazebo
             link_coord = link_name_ptr->WorldPose();
             // std::cout << "linkCoordinates:" << link_coord << std::endl;
 
+            // every contact is treated independently
             size_t j = 0;
             for (size_t k = 0; k < contacts.contact(j).position_size(); k++)
             {
@@ -474,10 +475,9 @@ namespace gazebo
                 // initialize gaussian
                 double max_val_gau = 0;
 
-                // compute taxel in contact
+                // compute taxel in contact for palm
                 if (linksLocalNames[i] == "r_hand" || linksLocalNames[i] == "l_hand")
                 {
-                    // calc sigma for palm
                     // std::cout << "calc sigma for palm!" << std::endl;
                     if (calc_lin)
                     {
@@ -589,6 +589,7 @@ namespace gazebo
                         }
                     }
                 }
+                // compute taxel in contact for fingertips
                 else
                 {
                     // calc sigma for finger
@@ -640,7 +641,6 @@ namespace gazebo
                         ;
 
                         // calc force according scaled gaussian
-
                         force_tax = force_res * (exp(-((pow(taxel_placement_finger.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_finger.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_finger.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z(), 2) / pow(2 * sigma, 2)))) / max_val_gau);
 
                         taxelId_link = taxel_placement_finger.at(linksLocalNames[i])[0][m];
