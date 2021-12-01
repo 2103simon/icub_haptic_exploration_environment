@@ -354,7 +354,7 @@ namespace gazebo
         }
 
         for (size_t i = 0; i < numberOfLinks; i++)
-            taxelIds.push_back(taxelIdsBottle.get((i + 1)).asInt());
+            taxelIds.push_back(taxelIdsBottle.get((i + 1)).asInt32());
 
         // Retrieve the links from the model
         RetrieveLinksFromLocalNames(linksLocalNames, m_linksMap);
@@ -510,30 +510,46 @@ namespace gazebo
                         {
                             max_val_gau = exp(-(pow(palm_lengths, 2) / pow(2 * sigma, 2)));
                         }
+                        /*
                         else
                         {
                             continue;
                         }
+                        */
                     }
-                    // calc force and transmit
+                    
+                    // init
+                    yarp::sig::Vector diffVector(3, 0.0);
+                    diffVector = {0.0, 0.0, 0.0};
+                    taxel_placement_palm.at(linksLocalNames[i])[4] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+                    // calc force per taxel
                     for (size_t m = 0; m < taxel_placement_palm.at(linksLocalNames[i])[0].size(); m++)
                     {
                         // diff between contact position and taxel position
-                        yarp::sig::Vector diffVector(3, 0.0);
+                        // yarp::sig::Vector diffVector(3, 0.0);
                         diffVector[0] = taxel_placement_palm.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X();
                         diffVector[1] = taxel_placement_palm.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y();
                         diffVector[2] = taxel_placement_palm.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z();
                         ;
 
                         // calc force according scaled gaussian
-
                         force_tax = force_res * (exp(-((pow(taxel_placement_palm.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_palm.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_palm.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z(), 2) / pow(2 * sigma, 2)))) / max_val_gau);
+                        
+                        // store the highest force value per taxel per fingertip
+                        if (force_tax > taxel_placement_palm.at(linksLocalNames[i])[4][m])
+                        {
+                            taxel_placement_palm.at(linksLocalNames[i])[4][m] = force_tax;
+                        }
+                    }
 
+                    // transmit force per taxel
+                    for (size_t m = 0; m < taxel_placement_palm.at(linksLocalNames[i])[0].size(); m++)
+                    {
                         taxelId_link = taxel_placement_palm.at(linksLocalNames[i])[0][m];
-
+                        // move out of this loop (event driven & conventional)! final force per taxel needs to be known after all contacts per fingertip are calculated
                         if (event_driven)
                         {
-                            auto delta_force = force_tax - taxel_placement_palm.at(linksLocalNames[i])[5][m];
+                            auto delta_force = taxel_placement_palm.at(linksLocalNames[i])[4][m] - taxel_placement_palm.at(linksLocalNames[i])[5][m];
                             taxel_placement_palm.at(linksLocalNames[i])[5][m] = force_tax;
                             if (delta_force > delta_force_th_palm)
                             {
@@ -552,8 +568,6 @@ namespace gazebo
                         }
                         else
                         {
-                            // TODO: store them and use the sum of multiple contacts
-                            // move one loop out
                             if (force_tax > force_th_palm)
                             {
                                 // write force_tax to variable at position taxelId_link
@@ -592,8 +606,7 @@ namespace gazebo
                 // compute taxel in contact for fingertips
                 else
                 {
-                    // calc sigma for finger
-                    std::cout << "calc sigma for finger!" << std::endl;
+                    // std::cout << "calc sigma for finger!" << std::endl;
                     if (calc_lin)
                     {
                         if (force_res < f_max_finger)
@@ -620,21 +633,28 @@ namespace gazebo
                     for (size_t l = 0; l < number_increments_lengths; l++)
                     {
                         double finger_lengths = -dist_th_finger + l * (2 * dist_th_finger / number_increments_lengths);
+                        // check if assigning a new variable is faster then to do the computation twice (memory vs. speed)
                         if (exp(-(pow(finger_lengths, 2) / pow(2 * sigma, 2))) > max_val_gau)
                         {
                             max_val_gau = exp(-(pow(finger_lengths, 2) / pow(2 * sigma, 2)));
                         }
+                        /*
                         else
                         {
                             continue;
                         }
+                        */
                     }
-
-                    // calc force and transmit
+                    
+                    // init
+                    yarp::sig::Vector diffVector(3, 0.0);
+                    diffVector = {0.0, 0.0, 0.0};
+                    taxel_placement_finger.at(linksLocalNames[i])[4] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+                    // calc force per taxel
                     for (size_t m = 0; m < taxel_placement_finger.at(linksLocalNames[i])[0].size(); m++)
                     {
                         // diff between contact position and taxel position
-                        yarp::sig::Vector diffVector(3, 0.0);
+                        // yarp::sig::Vector diffVector(3, 0.0);
                         diffVector[0] = taxel_placement_finger.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X();
                         diffVector[1] = taxel_placement_finger.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y();
                         diffVector[2] = taxel_placement_finger.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z();
@@ -642,12 +662,22 @@ namespace gazebo
 
                         // calc force according scaled gaussian
                         force_tax = force_res * (exp(-((pow(taxel_placement_finger.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_finger.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_finger.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z(), 2) / pow(2 * sigma, 2)))) / max_val_gau);
+                        
+                        // store the highest force value per taxel per fingertip
+                        if (force_tax > taxel_placement_finger.at(linksLocalNames[i])[4][m])
+                        {
+                            taxel_placement_finger.at(linksLocalNames[i])[4][m] = force_tax;
+                        }
+                    }
 
+                    // transmit force per taxel
+                    for (size_t m = 0; m < taxel_placement_finger.at(linksLocalNames[i])[0].size(); m++)
+                    {
                         taxelId_link = taxel_placement_finger.at(linksLocalNames[i])[0][m];
-
+                        // move out of this loop (event driven & conventional)! final force per taxel needs to be known after all contacts per fingertip are calculated
                         if (event_driven)
                         {
-                            auto delta_force = force_tax - taxel_placement_finger.at(linksLocalNames[i])[5][m];
+                            auto delta_force = taxel_placement_finger.at(linksLocalNames[i])[4][m] - taxel_placement_finger.at(linksLocalNames[i])[5][m];
                             taxel_placement_finger.at(linksLocalNames[i])[5][m] = force_tax;
                             if (delta_force > delta_force_th_finger)
                             {
@@ -666,12 +696,12 @@ namespace gazebo
                         }
                         else
                         {
-                            /* code */
-                        }
-
-                        {
                             if (force_tax > force_th_finger)
                             {
+                                // write force_tax to variable at position taxelId_link
+                                // taxel_placement_finger.at(linksLocalNames[i])[4][m] = taxel_placement_finger.at(linksLocalNames[i])[4][m] + force_tax;
+
+                                // old code:
                                 std::cout << "force at taxel: " << force_tax << " "
                                           << "taxelID: " << taxelId_link << std::endl;
                                 publish_data = true;
@@ -689,7 +719,7 @@ namespace gazebo
                                 // Suppose each contact is due to one taxel only
                                 skinContact.setActiveTaxels(1); // in the actual implementaion only 1 works
 
-                                // Set the right taxel ID depending on the finger
+                                // Set the right taxel id depending on the finger
                                 // involved in the contact
                                 std::vector<unsigned int> taxelIds;
                                 taxelIds.push_back(sensor.taxelId + taxelId_link);
