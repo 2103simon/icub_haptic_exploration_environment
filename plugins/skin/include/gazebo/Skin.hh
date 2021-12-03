@@ -434,7 +434,7 @@ namespace gazebo
   double m_lin_palm = sigma_max_palm / f_max_palm;
   double b_lin_palm = 0;
   double force_th_palm = 0;
-  double delta_force_th_palm = 1e-4;
+  double delta_force_th_palm = 0;
 
   double dist_th_finger = 5e-3;
   double f_max_finger = 4.0;
@@ -443,7 +443,7 @@ namespace gazebo
   double m_lin_finger = sigma_max_finger / f_max_finger;
   double b_lin_finger = 0;
   double force_th_finger = 0;
-  double delta_force_th_finger = 1e-4;
+  double delta_force_th_finger = 0;
 
   double sigma;
 
