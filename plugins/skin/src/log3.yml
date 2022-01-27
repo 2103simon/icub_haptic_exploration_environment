@@ -1,0 +1,956 @@
+contacts.contact(j).position_size(): 7
+contacts.contact(j).position(k): 0.302496 -0.141616 0.515001
+force_res: 3.14983
+contact in Link Coordinates: 
+0.017504 0.005929 0.001591 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.269742
+taxel: 1, force: 0.826722
+taxel: 2, force: 0.621485
+taxel: 3, force: 0.0672868
+taxel: 4, force: 0.0126755
+taxel: 5, force: 1.63846
+taxel: 6, force: 2.17954
+taxel: 7, force: 0.711138
+taxel: 8, force: 0.483242
+taxel: 9, force: 1.20864
+taxel: 10, force: 1.11339
+taxel: 11, force: 0.0955609
+contacts.contact(j).position(k): 0.302713 -0.142678 0.513625
+force_res: 3.45212
+contact in Link Coordinates: 
+0.01854 0.00589 0.00018 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.291263
+old force_dummy[m]: 0.290754
+new force_dummy[m]: 0.291263
+taxel: 1, force: 0.608539
+taxel: 2, force: 0.319941
+taxel: 3, force: 0.0277693
+taxel: 4, force: 0.0230142
+taxel: 5, force: 1.07912
+taxel: 6, force: 2.05252
+taxel: 7, force: 0.982391
+taxel: 8, force: 0.987581
+taxel: 9, force: 1.93916
+taxel: 10, force: 1.08482
+taxel: 11, force: 0.204878
+contacts.contact(j).position(k): 0.303453 -0.14435 0.512086
+force_res: 3.41376
+contact in Link Coordinates: 
+0.019956 0.005245 -0.001634 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.205345
+taxel: 1, force: 0.225632
+taxel: 2, force: 0.0873729
+taxel: 3, force: 0.00715849
+taxel: 4, force: 0.03954
+taxel: 5, force: 0.414969
+taxel: 6, force: 1.07162
+taxel: 7, force: 0.975267
+taxel: 8, force: 1.80677
+taxel: 9, force: 2.44277
+taxel: 10, force: 0.768767
+taxel: 11, force: 0.442069
+contacts.contact(j).position(k): 0.303135 -0.143714 0.5126
+force_res: 5.85681e-99
+No significant force
+contacts.contact(j).position(k): 0.303134 -0.143711 0.512602
+force_res: 6.24512e-97
+No significant force
+contacts.contact(j).position(k): 0.302547 -0.141935 0.514576
+force_res: 0.0308619
+contact in Link Coordinates: 
+0.017815 0.005933 0.001158 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0
+taxel: 1, force: 5.66151e-231
+taxel: 2, force: 6.59145e-295
+taxel: 3, force: 0
+taxel: 4, force: 0
+taxel: 5, force: 5.84543e-128
+taxel: 6, force: 5.02074e-64
+taxel: 7, force: 5.30593e-225
+taxel: 8, force: 2.6311e-268
+taxel: 9, force: 2.19518e-133
+taxel: 10, force: 2.89863e-171
+taxel: 11, force: 0
+contacts.contact(j).position(k): 0.302497 -0.141616 0.515
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 5
+contacts.contact(j).position(k): 0.302497 -0.141615 0.515001
+force_res: 3.01291
+contact in Link Coordinates: 
+0.017505 0.005929 0.001593 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.256296
+taxel: 1, force: 0.787893
+taxel: 2, force: 0.592156
+taxel: 3, force: 0.0638135
+taxel: 4, force: 0.0119543
+taxel: 5, force: 1.56496
+taxel: 6, force: 2.08225
+taxel: 7, force: 0.677342
+taxel: 8, force: 0.459995
+taxel: 9, force: 1.15356
+taxel: 10, force: 1.06279
+taxel: 11, force: 0.090687
+contacts.contact(j).position(k): 0.302713 -0.142676 0.513626
+force_res: 3.53885
+contact in Link Coordinates: 
+0.018539 0.00589 0.000181 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.299138
+old force_dummy[m]: 0.291263
+new force_dummy[m]: 0.299138
+taxel: 1, force: 0.624943
+taxel: 2, force: 0.328815
+taxel: 3, force: 0.0285936
+taxel: 4, force: 0.0236652
+taxel: 5, force: 1.1078
+taxel: 6, force: 2.10548
+taxel: 7, force: 1.00782
+taxel: 8, force: 1.01271
+taxel: 9, force: 1.98809
+taxel: 10, force: 1.11318
+taxel: 11, force: 0.210314
+contacts.contact(j).position(k): 0.303452 -0.144349 0.512087
+force_res: 3.36767
+contact in Link Coordinates: 
+0.019955 0.005245 -0.001632 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.202412
+taxel: 1, force: 0.222566
+taxel: 2, force: 0.0861705
+taxel: 3, force: 0.00705194
+taxel: 4, force: 0.0389102
+taxel: 5, force: 0.40942
+taxel: 6, force: 1.05747
+taxel: 7, force: 0.961715
+taxel: 8, force: 1.78111
+taxel: 9, force: 2.40934
+taxel: 10, force: 0.75825
+taxel: 11, force: 0.435441
+contacts.contact(j).position(k): 0.303135 -0.143713 0.5126
+force_res: 6.93799e-99
+No significant force
+contacts.contact(j).position(k): 0.302547 -0.141935 0.514576
+force_res: 0.041772
+contact in Link Coordinates: 
+0.017814 0.005933 0.001158 1.0867 -0.347129 -0.811639
+taxel: 0, force: 7.76752e-219
+taxel: 1, force: 2.62899e-129
+taxel: 2, force: 7.47252e-165
+taxel: 3, force: 0
+taxel: 4, force: 0
+taxel: 5, force: 5.16609e-72
+taxel: 6, force: 1.81754e-36
+taxel: 7, force: 5.37004e-126
+taxel: 8, force: 4.38146e-150
+taxel: 9, force: 4.78454e-75
+taxel: 10, force: 4.21506e-96
+taxel: 11, force: 1.95036e-293
+contacts.contact(j).position_size(): 5
+contacts.contact(j).position(k): 0.302497 -0.141626 0.515001
+force_res: 8.52349
+contact in Link Coordinates: 
+0.017504 0.005923 0.001584 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.749009
+old force_dummy[m]: 0.299138
+new force_dummy[m]: 0.749009
+taxel: 1, force: 2.2654
+old force_dummy[m]: 0.888103
+new force_dummy[m]: 2.2654
+taxel: 2, force: 1.70656
+old force_dummy[m]: 0.667985
+new force_dummy[m]: 1.70656
+taxel: 3, force: 0.188407
+old force_dummy[m]: 0.0727437
+new force_dummy[m]: 0.188407
+taxel: 4, force: 0.0362935
+taxel: 5, force: 4.46078
+old force_dummy[m]: 1.75616
+new force_dummy[m]: 4.46078
+taxel: 6, force: 5.92154
+old force_dummy[m]: 2.33486
+new force_dummy[m]: 5.92154
+taxel: 7, force: 1.95783
+old force_dummy[m]: 1.19411
+new force_dummy[m]: 1.95783
+taxel: 8, force: 1.3356
+taxel: 9, force: 3.30466
+old force_dummy[m]: 2.98038
+new force_dummy[m]: 3.30466
+taxel: 10, force: 3.04306
+old force_dummy[m]: 1.19445
+new force_dummy[m]: 3.04306
+taxel: 11, force: 0.267464
+contacts.contact(j).position(k): 0.302712 -0.142674 0.513629
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.30345 -0.144345 0.51209
+force_res: 1.43447
+contact in Link Coordinates: 
+0.019952 0.005247 -0.001629 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.0513659
+taxel: 1, force: 0.0575727
+taxel: 2, force: 0.0187171
+taxel: 3, force: 0.000964685
+taxel: 4, force: 0.0072654
+taxel: 5, force: 0.118487
+taxel: 6, force: 0.36446
+taxel: 7, force: 0.325168
+taxel: 8, force: 0.673759
+taxel: 9, force: 0.964571
+taxel: 10, force: 0.245509
+taxel: 11, force: 0.126923
+contacts.contact(j).position(k): 0.303133 -0.143711 0.512602
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302547 -0.141933 0.514578
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 5
+contacts.contact(j).position(k): 0.302498 -0.141626 0.515001
+force_res: 8.09387
+contact in Link Coordinates: 
+0.017504 0.005923 0.001584 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.711257
+taxel: 1, force: 2.15117
+taxel: 2, force: 1.62055
+taxel: 3, force: 0.178919
+taxel: 4, force: 0.0344654
+taxel: 5, force: 4.23599
+taxel: 6, force: 5.623
+taxel: 7, force: 1.85917
+taxel: 8, force: 1.26832
+taxel: 9, force: 3.13818
+taxel: 10, force: 2.88979
+taxel: 11, force: 0.253998
+contacts.contact(j).position(k): 0.302711 -0.142673 0.51363
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.30345 -0.144345 0.51209
+force_res: 1.64009
+contact in Link Coordinates: 
+0.019952 0.005247 -0.001629 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.0699848
+taxel: 1, force: 0.0779823
+taxel: 2, force: 0.026899
+taxel: 3, force: 0.00162061
+taxel: 4, force: 0.0109702
+taxel: 5, force: 0.154512
+taxel: 6, force: 0.447941
+taxel: 7, force: 0.402002
+taxel: 8, force: 0.801533
+taxel: 9, force: 1.12612
+taxel: 10, force: 0.308073
+taxel: 11, force: 0.164856
+contacts.contact(j).position(k): 0.303133 -0.14371 0.512603
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302547 -0.141932 0.51458
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 4
+contacts.contact(j).position(k): 0.302497 -0.141626 0.515001
+force_res: 7.73362
+contact in Link Coordinates: 
+0.017503 0.005923 0.001584 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.67963
+taxel: 1, force: 2.05556
+taxel: 2, force: 1.54848
+taxel: 3, force: 0.170952
+taxel: 4, force: 0.0329313
+taxel: 5, force: 4.04748
+taxel: 6, force: 5.3729
+taxel: 7, force: 1.77645
+taxel: 8, force: 1.21181
+taxel: 9, force: 2.99834
+taxel: 10, force: 2.76101
+taxel: 11, force: 0.242664
+contacts.contact(j).position(k): 0.303451 -0.144346 0.512089
+force_res: 1.98162
+contact in Link Coordinates: 
+0.019953 0.005247 -0.00163 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.100061
+taxel: 1, force: 0.110783
+taxel: 2, force: 0.040442
+taxel: 3, force: 0.00283162
+taxel: 4, force: 0.0173339
+taxel: 5, force: 0.211622
+taxel: 6, force: 0.579696
+taxel: 7, force: 0.523591
+taxel: 8, force: 1.00665
+taxel: 9, force: 1.38829
+taxel: 10, force: 0.406863
+taxel: 11, force: 0.225348
+contacts.contact(j).position(k): 0.303133 -0.14371 0.512603
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302547 -0.141931 0.514581
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 4
+contacts.contact(j).position(k): 0.302498 -0.141626 0.515001
+force_res: 7.4214
+contact in Link Coordinates: 
+0.017503 0.005923 0.001584 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.652207
+taxel: 1, force: 1.97252
+taxel: 2, force: 1.48594
+taxel: 3, force: 0.164051
+taxel: 4, force: 0.0316045
+taxel: 5, force: 3.88407
+taxel: 6, force: 5.15595
+taxel: 7, force: 1.70479
+taxel: 8, force: 1.16298
+taxel: 9, force: 2.87743
+taxel: 10, force: 2.64963
+taxel: 11, force: 0.232888
+contacts.contact(j).position(k): 0.303452 -0.144349 0.512087
+force_res: 2.32811
+contact in Link Coordinates: 
+0.019955 0.005245 -0.001633 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.128347
+taxel: 1, force: 0.141501
+taxel: 2, force: 0.0532043
+taxel: 3, force: 0.00403171
+taxel: 4, force: 0.0234621
+taxel: 5, force: 0.2652
+taxel: 6, force: 0.705321
+taxel: 7, force: 0.639753
+taxel: 8, force: 1.20765
+taxel: 9, force: 1.64853
+taxel: 10, force: 0.500613
+taxel: 11, force: 0.282733
+contacts.contact(j).position(k): 0.303133 -0.143711 0.512602
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302547 -0.141931 0.514582
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 4
+contacts.contact(j).position(k): 0.302496 -0.141618 0.515001
+force_res: 3.18637
+contact in Link Coordinates: 
+0.017504 0.005929 0.00159 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.273439
+taxel: 1, force: 0.837157
+taxel: 2, force: 0.629331
+taxel: 3, force: 0.0682087
+taxel: 4, force: 0.0128766
+taxel: 5, force: 1.65813
+taxel: 6, force: 2.2057
+taxel: 7, force: 0.720444
+taxel: 8, force: 0.489635
+taxel: 9, force: 1.22349
+taxel: 10, force: 1.12691
+taxel: 11, force: 0.0968716
+contacts.contact(j).position(k): 0.303454 -0.144353 0.512084
+force_res: 6.8438
+contact in Link Coordinates: 
+0.019958 0.005243 -0.001637 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.417773
+taxel: 1, force: 0.458302
+taxel: 2, force: 0.178325
+taxel: 3, force: 0.0148121
+taxel: 4, force: 0.0812966
+old force_dummy[m]: 0.0490499
+new force_dummy[m]: 0.0812966
+taxel: 5, force: 0.840141
+taxel: 6, force: 2.15919
+taxel: 7, force: 1.96825
+old force_dummy[m]: 1.95783
+new force_dummy[m]: 1.96825
+taxel: 8, force: 3.63741
+old force_dummy[m]: 2.20749
+new force_dummy[m]: 3.63741
+taxel: 9, force: 4.9064
+old force_dummy[m]: 3.30466
+new force_dummy[m]: 4.9064
+taxel: 10, force: 1.55261
+taxel: 11, force: 0.897062
+old force_dummy[m]: 0.543212
+new force_dummy[m]: 0.897062
+contacts.contact(j).position(k): 0.303134 -0.143712 0.512601
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141931 0.514582
+force_res: 0.0846914
+contact in Link Coordinates: 
+0.01781 0.005933 0.001164 1.0867 -0.347129 -0.811639
+taxel: 0, force: 1.68223e-58
+taxel: 1, force: 4.84068e-35
+taxel: 2, force: 2.63967e-44
+taxel: 3, force: 8.82601e-98
+taxel: 4, force: 3.58457e-126
+taxel: 5, force: 4.84957e-20
+taxel: 6, force: 8.89325e-11
+taxel: 7, force: 3.09058e-34
+taxel: 8, force: 1.40635e-40
+taxel: 9, force: 6.33981e-21
+taxel: 10, force: 2.20676e-26
+taxel: 11, force: 4.32935e-78
+contacts.contact(j).position_size(): 6
+contacts.contact(j).position(k): 0.302494 -0.14162 0.515
+force_res: 3.85856
+contact in Link Coordinates: 
+0.017502 0.005929 0.001587 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.336243
+taxel: 1, force: 1.02237
+taxel: 2, force: 0.769158
+taxel: 3, force: 0.0843201
+taxel: 4, force: 0.0161141
+taxel: 5, force: 2.01493
+taxel: 6, force: 2.67824
+taxel: 7, force: 0.880839
+taxel: 8, force: 0.59961
+taxel: 9, force: 1.48937
+taxel: 10, force: 1.37161
+taxel: 11, force: 0.119555
+contacts.contact(j).position(k): 0.302714 -0.14268 0.513622
+force_res: 1.62322
+contact in Link Coordinates: 
+0.018542 0.005889 0.000177 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.0999344
+taxel: 1, force: 0.229115
+taxel: 2, force: 0.110915
+taxel: 3, force: 0.00704919
+taxel: 4, force: 0.00572252
+taxel: 5, force: 0.437001
+taxel: 6, force: 0.902703
+taxel: 7, force: 0.393737
+taxel: 8, force: 0.396445
+taxel: 9, force: 0.847788
+taxel: 10, force: 0.440006
+taxel: 11, force: 0.0673213
+contacts.contact(j).position(k): 0.303456 -0.144356 0.512081
+force_res: 4.72161
+contact in Link Coordinates: 
+0.01996 0.005242 -0.00164 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.287505
+taxel: 1, force: 0.315065
+taxel: 2, force: 0.122476
+taxel: 3, force: 0.0101592
+taxel: 4, force: 0.0559822
+taxel: 5, force: 0.577853
+taxel: 6, force: 1.48651
+taxel: 7, force: 1.35648
+taxel: 8, force: 2.51034
+taxel: 9, force: 3.3846
+taxel: 10, force: 1.06939
+taxel: 11, force: 0.61883
+contacts.contact(j).position(k): 0.303134 -0.143713 0.5126
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302547 -0.141931 0.514582
+force_res: 0.00153903
+No significant force
+contacts.contact(j).position(k): 0.302494 -0.14162 0.515
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 6
+contacts.contact(j).position(k): 0.302494 -0.141618 0.515
+force_res: 3.77415
+contact in Link Coordinates: 
+0.017503 0.00593 0.001589 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.328288
+taxel: 1, force: 0.999238
+taxel: 2, force: 0.751799
+taxel: 3, force: 0.0823511
+taxel: 4, force: 0.0157027
+taxel: 5, force: 1.97029
+taxel: 6, force: 2.61878
+taxel: 7, force: 0.860367
+taxel: 8, force: 0.585556
+taxel: 9, force: 1.45576
+taxel: 10, force: 1.34096
+taxel: 11, force: 0.116718
+contacts.contact(j).position(k): 0.302714 -0.142679 0.513624
+force_res: 2.23153
+contact in Link Coordinates: 
+0.01854 0.005889 0.000178 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.171219
+taxel: 1, force: 0.367839
+taxel: 2, force: 0.188627
+taxel: 3, force: 0.0149028
+taxel: 4, force: 0.0122791
+taxel: 5, force: 0.666766
+taxel: 6, force: 1.30026
+taxel: 7, force: 0.605233
+taxel: 8, force: 0.608769
+taxel: 9, force: 1.22639
+taxel: 10, force: 0.670662
+taxel: 11, force: 0.118889
+contacts.contact(j).position(k): 0.303455 -0.144354 0.512083
+force_res: 4.14866
+contact in Link Coordinates: 
+0.019959 0.005243 -0.001638 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.252071
+taxel: 1, force: 0.276442
+taxel: 2, force: 0.107392
+taxel: 3, force: 0.00888657
+taxel: 4, force: 0.0489595
+taxel: 5, force: 0.507277
+taxel: 6, force: 1.3058
+taxel: 7, force: 1.19069
+taxel: 8, force: 2.20346
+taxel: 9, force: 2.97283
+taxel: 10, force: 0.938757
+taxel: 11, force: 0.542338
+contacts.contact(j).position(k): 0.303134 -0.143712 0.512601
+force_res: 1.11724e-99
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.14193 0.514583
+force_res: 0.000768691
+No significant force
+contacts.contact(j).position(k): 0.302495 -0.141618 0.515
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 6
+contacts.contact(j).position(k): 0.302496 -0.141616 0.515001
+force_res: 3.15723
+contact in Link Coordinates: 
+0.017504 0.00593 0.001591 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.270419
+taxel: 1, force: 0.828857
+taxel: 2, force: 0.623062
+taxel: 3, force: 0.067463
+taxel: 4, force: 0.012708
+taxel: 5, force: 1.64236
+taxel: 6, force: 2.18482
+taxel: 7, force: 0.71281
+taxel: 8, force: 0.484328
+taxel: 9, force: 1.21136
+taxel: 10, force: 1.11592
+taxel: 11, force: 0.0957844
+contacts.contact(j).position(k): 0.302713 -0.142677 0.513626
+force_res: 2.90627
+contact in Link Coordinates: 
+0.018539 0.00589 0.000181 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.240368
+taxel: 1, force: 0.50541
+taxel: 2, force: 0.264402
+taxel: 3, force: 0.0224989
+taxel: 4, force: 0.0185945
+taxel: 5, force: 0.900429
+taxel: 6, force: 1.72119
+taxel: 7, force: 0.81858
+taxel: 8, force: 0.822589
+taxel: 9, force: 1.62441
+taxel: 10, force: 0.904839
+taxel: 11, force: 0.168456
+contacts.contact(j).position(k): 0.303454 -0.144352 0.512085
+force_res: 3.85433
+contact in Link Coordinates: 
+0.019957 0.005244 -0.001636 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.233701
+taxel: 1, force: 0.256591
+taxel: 2, force: 0.0996217
+taxel: 3, force: 0.00822231
+taxel: 4, force: 0.045249
+taxel: 5, force: 0.471083
+taxel: 6, force: 1.21334
+taxel: 7, force: 1.10511
+taxel: 8, force: 2.04443
+taxel: 9, force: 2.7608
+taxel: 10, force: 0.871494
+taxel: 11, force: 0.502332
+contacts.contact(j).position(k): 0.303133 -0.14371 0.512603
+force_res: 6.91161e-99
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141929 0.514584
+force_res: 0.0641713
+contact in Link Coordinates: 
+0.017808 0.005932 0.001166 1.0867 -0.347129 -0.811639
+taxel: 0, force: 2.55754e-97
+taxel: 1, force: 7.87111e-58
+taxel: 2, force: 2.15295e-73
+taxel: 3, force: 2.39688e-163
+taxel: 4, force: 3.38238e-211
+taxel: 5, force: 1.38902e-32
+taxel: 6, force: 5.07821e-17
+taxel: 7, force: 1.65005e-56
+taxel: 8, force: 3.37257e-67
+taxel: 9, force: 4.05385e-34
+taxel: 10, force: 2.83905e-43
+taxel: 11, force: 2.61506e-130
+contacts.contact(j).position(k): 0.302497 -0.141616 0.515
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 5
+contacts.contact(j).position(k): 0.302498 -0.141626 0.515001
+force_res: 8.69823
+contact in Link Coordinates: 
+0.017503 0.005923 0.001584 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.764428
+old force_dummy[m]: 0.749009
+new force_dummy[m]: 0.764428
+taxel: 1, force: 2.31191
+old force_dummy[m]: 2.2654
+new force_dummy[m]: 2.31191
+taxel: 2, force: 1.74161
+old force_dummy[m]: 1.70656
+new force_dummy[m]: 1.74161
+taxel: 3, force: 0.192281
+old force_dummy[m]: 0.188407
+new force_dummy[m]: 0.192281
+taxel: 4, force: 0.0370429
+taxel: 5, force: 4.55234
+old force_dummy[m]: 4.46078
+new force_dummy[m]: 4.55234
+taxel: 6, force: 6.04303
+old force_dummy[m]: 5.92154
+new force_dummy[m]: 6.04303
+taxel: 7, force: 1.99811
+old force_dummy[m]: 1.96825
+new force_dummy[m]: 1.99811
+taxel: 8, force: 1.36307
+taxel: 9, force: 3.37248
+taxel: 10, force: 3.10551
+old force_dummy[m]: 3.04306
+new force_dummy[m]: 3.10551
+taxel: 11, force: 0.272958
+contacts.contact(j).position(k): 0.302712 -0.142674 0.513628
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.303452 -0.144348 0.512088
+force_res: 1.03423
+contact in Link Coordinates: 
+0.019954 0.005246 -0.001632 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.0183176
+taxel: 1, force: 0.0209949
+taxel: 2, force: 0.00538126
+taxel: 3, force: 0.000148332
+taxel: 4, force: 0.00171872
+taxel: 5, force: 0.05033
+taxel: 6, force: 0.196362
+taxel: 7, force: 0.171321
+taxel: 8, force: 0.414621
+taxel: 9, force: 0.639637
+taxel: 10, force: 0.121806
+taxel: 11, force: 0.0549355
+contacts.contact(j).position(k): 0.303132 -0.143709 0.512604
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141928 0.514585
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 4
+contacts.contact(j).position(k): 0.302497 -0.141626 0.515001
+force_res: 8.40361
+contact in Link Coordinates: 
+0.017503 0.005923 0.001584 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.738523
+taxel: 1, force: 2.23364
+taxel: 2, force: 1.68262
+taxel: 3, force: 0.185762
+taxel: 4, force: 0.0357859
+taxel: 5, force: 4.39812
+taxel: 6, force: 5.83838
+taxel: 7, force: 1.93038
+taxel: 8, force: 1.31684
+taxel: 9, force: 3.25815
+taxel: 10, force: 3.00023
+taxel: 11, force: 0.263696
+contacts.contact(j).position(k): 0.303452 -0.144348 0.512088
+force_res: 1.20269
+contact in Link Coordinates: 
+0.019954 0.005246 -0.001632 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.0311774
+taxel: 1, force: 0.0352857
+taxel: 2, force: 0.010285
+taxel: 3, force: 0.000397898
+taxel: 4, force: 0.00365631
+taxel: 5, force: 0.0778827
+taxel: 6, force: 0.267199
+taxel: 7, force: 0.23609
+taxel: 8, force: 0.525519
+taxel: 9, force: 0.778313
+taxel: 10, force: 0.173361
+taxel: 11, force: 0.0842603
+contacts.contact(j).position(k): 0.303132 -0.143708 0.512605
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141928 0.514586
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 5
+contacts.contact(j).position(k): 0.302498 -0.141626 0.515001
+force_res: 8.16125
+contact in Link Coordinates: 
+0.017504 0.005923 0.001584 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.717215
+taxel: 1, force: 2.16909
+taxel: 2, force: 1.63408
+taxel: 3, force: 0.180418
+taxel: 4, force: 0.0347562
+taxel: 5, force: 4.27135
+taxel: 6, force: 5.66983
+taxel: 7, force: 1.87474
+taxel: 8, force: 1.27896
+taxel: 9, force: 3.16441
+taxel: 10, force: 2.91394
+taxel: 11, force: 0.256128
+contacts.contact(j).position(k): 0.302712 -0.142674 0.513628
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.303452 -0.144349 0.512087
+force_res: 1.54899
+contact in Link Coordinates: 
+0.019955 0.005245 -0.001633 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.0616407
+taxel: 1, force: 0.068708
+taxel: 2, force: 0.023144
+taxel: 3, force: 0.00131219
+taxel: 4, force: 0.00930798
+taxel: 5, force: 0.138207
+taxel: 6, force: 0.410296
+taxel: 7, force: 0.368093
+taxel: 8, force: 0.746329
+taxel: 9, force: 1.0551
+taxel: 10, force: 0.280222
+taxel: 11, force: 0.148414
+contacts.contact(j).position(k): 0.303132 -0.143708 0.512605
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141927 0.514587
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 5
+contacts.contact(j).position(k): 0.302496 -0.141618 0.515
+force_res: 3.49777
+contact in Link Coordinates: 
+0.017504 0.005929 0.00159 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.302674
+taxel: 1, force: 0.92325
+taxel: 2, force: 0.694622
+taxel: 3, force: 0.0758381
+taxel: 4, force: 0.0143993
+taxel: 5, force: 1.82407
+taxel: 6, force: 2.42445
+taxel: 7, force: 0.79482
+taxel: 8, force: 0.540823
+taxel: 9, force: 1.34724
+taxel: 10, force: 1.24116
+taxel: 11, force: 0.107573
+contacts.contact(j).position(k): 0.303455 -0.144354 0.512083
+force_res: 6.46678
+contact in Link Coordinates: 
+0.019959 0.005243 -0.001638 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.394602
+taxel: 1, force: 0.432759
+taxel: 2, force: 0.168374
+taxel: 3, force: 0.0139863
+taxel: 4, force: 0.0768196
+taxel: 5, force: 0.793428
+taxel: 6, force: 2.03929
+taxel: 7, force: 1.85949
+taxel: 8, force: 3.43765
+taxel: 9, force: 4.63639
+taxel: 10, force: 1.46682
+taxel: 11, force: 0.847949
+contacts.contact(j).position(k): 0.303133 -0.14371 0.512603
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141927 0.514587
+force_res: 0.200121
+contact in Link Coordinates: 
+0.017807 0.005932 0.001168 1.0867 -0.347129 -0.811639
+taxel: 0, force: 1.01327e-13
+taxel: 1, force: 1.25365e-08
+taxel: 2, force: 1.24687e-10
+taxel: 3, force: 3.19922e-22
+taxel: 4, force: 2.11277e-28
+taxel: 5, force: 2.25602e-05
+taxel: 6, force: 0.00226827
+taxel: 7, force: 1.83335e-08
+taxel: 8, force: 7.62925e-10
+taxel: 9, force: 1.40596e-05
+taxel: 10, force: 9.38811e-07
+taxel: 11, force: 5.60824e-18
+contacts.contact(j).position(k): 0.302496 -0.141618 0.515
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 5
+contacts.contact(j).position(k): 0.302493 -0.141621 0.515
+force_res: 6.28917
+contact in Link Coordinates: 
+0.017502 0.005929 0.001586 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.551764
+taxel: 1, force: 1.67255
+taxel: 2, force: 1.2588
+taxel: 3, force: 0.138713
+taxel: 4, force: 0.0266506
+taxel: 5, force: 3.28928
+taxel: 6, force: 4.3704
+taxel: 7, force: 1.44177
+taxel: 8, force: 0.982214
+taxel: 9, force: 2.43332
+taxel: 10, force: 2.24084
+taxel: 11, force: 0.19654
+contacts.contact(j).position(k): 0.302493 -0.141621 0.515
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.303457 -0.144358 0.51208
+force_res: 3.7766
+contact in Link Coordinates: 
+0.019962 0.005241 -0.001642 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.228276
+taxel: 1, force: 0.250043
+taxel: 2, force: 0.0969621
+taxel: 3, force: 0.00799643
+taxel: 4, force: 0.0443215
+taxel: 5, force: 0.459351
+taxel: 6, force: 1.18456
+taxel: 7, force: 1.08144
+taxel: 8, force: 2.00578
+taxel: 9, force: 2.70532
+taxel: 10, force: 0.85197
+taxel: 11, force: 0.492979
+contacts.contact(j).position(k): 0.303134 -0.143712 0.512601
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141928 0.514585
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 6
+contacts.contact(j).position(k): 0.302492 -0.14162 0.515
+force_res: 4.55567
+contact in Link Coordinates: 
+0.017501 0.00593 0.001587 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.398898
+taxel: 1, force: 1.21062
+taxel: 2, force: 0.910822
+taxel: 3, force: 0.100172
+taxel: 4, force: 0.0192134
+taxel: 5, force: 2.38138
+taxel: 6, force: 3.16522
+taxel: 7, force: 1.04293
+taxel: 8, force: 0.710078
+taxel: 9, force: 1.76064
+taxel: 10, force: 1.62135
+taxel: 11, force: 0.14189
+contacts.contact(j).position(k): 0.302493 -0.14162 0.515
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302714 -0.14268 0.513622
+force_res: 1.01543
+contact in Link Coordinates: 
+0.018542 0.005889 0.000177 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.0277954
+taxel: 1, force: 0.0811089
+taxel: 2, force: 0.031801
+taxel: 3, force: 0.000907153
+taxel: 4, force: 0.000693018
+taxel: 5, force: 0.186671
+taxel: 6, force: 0.476108
+taxel: 7, force: 0.163159
+taxel: 8, force: 0.164623
+taxel: 9, force: 0.439118
+taxel: 10, force: 0.188346
+taxel: 11, force: 0.0166972
+contacts.contact(j).position(k): 0.303457 -0.144357 0.51208
+force_res: 4.70487
+contact in Link Coordinates: 
+0.019962 0.005241 -0.001641 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.286352
+taxel: 1, force: 0.313659
+taxel: 2, force: 0.121915
+taxel: 3, force: 0.0101133
+taxel: 4, force: 0.0557934
+taxel: 5, force: 0.575365
+taxel: 6, force: 1.48028
+taxel: 7, force: 1.35141
+taxel: 8, force: 2.50218
+taxel: 9, force: 3.37283
+taxel: 10, force: 1.06531
+taxel: 11, force: 0.616939
+contacts.contact(j).position(k): 0.303134 -0.143712 0.512602
+force_res: 0
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141927 0.514586
+force_res: 0
+No significant force
+contacts.contact(j).position_size(): 6
+contacts.contact(j).position(k): 0.302493 -0.141618 0.515
+force_res: 3.99628
+contact in Link Coordinates: 
+0.017502 0.00593 0.001588 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.348466
+taxel: 1, force: 1.05961
+taxel: 2, force: 0.797285
+taxel: 3, force: 0.0874901
+taxel: 4, force: 0.0167129
+taxel: 5, force: 2.08741
+taxel: 6, force: 2.77422
+taxel: 7, force: 0.912337
+taxel: 8, force: 0.621024
+taxel: 9, force: 1.54253
+taxel: 10, force: 1.42089
+taxel: 11, force: 0.123941
+contacts.contact(j).position(k): 0.302713 -0.142678 0.513624
+force_res: 1.91273
+contact in Link Coordinates: 
+0.01854 0.00589 0.000179 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.13498
+taxel: 1, force: 0.297346
+taxel: 2, force: 0.149201
+taxel: 3, force: 0.010852
+taxel: 4, force: 0.00888186
+taxel: 5, force: 0.549515
+taxel: 6, force: 1.09514
+taxel: 7, force: 0.497139
+taxel: 8, force: 0.500074
+taxel: 9, force: 1.03076
+taxel: 10, force: 0.55276
+taxel: 11, force: 0.0925969
+contacts.contact(j).position(k): 0.303455 -0.144355 0.512082
+force_res: 4.16491
+contact in Link Coordinates: 
+0.01996 0.005242 -0.001639 1.0867 -0.347129 -0.811639
+taxel: 0, force: 0.253017
+taxel: 1, force: 0.277393
+taxel: 2, force: 0.10775
+taxel: 3, force: 0.00891684
+taxel: 4, force: 0.0491674
+taxel: 5, force: 0.509018
+taxel: 6, force: 1.31043
+taxel: 7, force: 1.19527
+taxel: 8, force: 2.21255
+taxel: 9, force: 2.98453
+taxel: 10, force: 0.942235
+taxel: 11, force: 0.544654
+contacts.contact(j).position(k): 0.303133 -0.14371 0.512603
+force_res: 5.95366e-99
+No significant force
+contacts.contact(j).position(k): 0.302546 -0.141927 0.514587
+force_res: 0.0405116
+contact in Link Coordinates: 
+0.017806 0.005933 0.001169 1.0867 -0.347129 -0.811639
+taxel: 0, force: 4.72717e-232
+taxel: 1, force: 8.39844e-137
+taxel: 2, force: 3.05976e-174
+taxel: 3, force: 0
+taxel: 4, force: 0
+taxel: 5, force: 6.2093e-76
+taxel: 6, force: 1.70433e-38
+taxel: 7, force: 9.59306e-134
+taxel: 8, force: 1.3773e-159
+taxel: 9, force: 8.21736e-80
+taxel: 10, force: 8.91488e-102
+taxel: 11, force: 1.0535e-311
+contacts.contact(j).position(k): 0.302494 -0.141618 0.515
+force_res: 0
+No significant force
+force at taxel 0 to transmit: 0.764428
+force at taxel 1 to transmit: 2.31191
+force at taxel 2 to transmit: 1.74161
+force at taxel 3 to transmit: 0.192281
+force at taxel 4 to transmit: 0.0812966
+force at taxel 5 to transmit: 4.55234
+force at taxel 6 to transmit: 6.04303
+force at taxel 7 to transmit: 1.99811
+force at taxel 8 to transmit: 3.63741
+force at taxel 9 to transmit: 4.9064
+force at taxel 10 to transmit: 3.10551
+force at taxel 11 to transmit: 0.897062
+skipping sensor nr: 2 of: 6
+skipping sensor nr: 3 of: 6
+skipping sensor nr: 4 of: 6
+skipping sensor nr: 5 of: 6

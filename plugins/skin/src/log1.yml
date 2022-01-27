@@ -1,0 +1,180 @@
+contact_count: 1
+collision_name: iCub::iCub::r_hand_index_3::r_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_middle_3::r_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_ring_3::r_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_little_3::r_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_thumb_3::r_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand::r_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 6 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::l_hand_index_3::l_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_middle_3::l_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_ring_3::l_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_little_3::l_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_thumb_3::l_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand::l_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 6 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::r_hand_index_3::r_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_middle_3::r_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_ring_3::r_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_little_3::r_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_thumb_3::r_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand::r_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 6 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::l_hand_index_3::l_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_middle_3::l_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_ring_3::l_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_little_3::l_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_thumb_3::l_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand::l_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 6 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::r_hand_index_3::r_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_middle_3::r_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_ring_3::r_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_little_3::r_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_thumb_3::r_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand::r_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 6 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::l_hand_index_3::l_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_middle_3::l_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_ring_3::l_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_little_3::l_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_thumb_3::l_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand::l_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 6 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::r_hand_index_3::r_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_middle_3::r_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_ring_3::r_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_little_3::r_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_thumb_3::r_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand::r_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 6 of: 6

@@ -62,7 +62,8 @@ Further, the relationship is defined by the following two parameters:
 
 One can read the output of the above-mentioned port from the command line using the following command:
 
-`yarp read ... /skinManager/skin_events:o`
+`yarp read ... /right_hand/skinManager/skin_events:o`
+`yarp read ... /left_hand/skinManager/skin_events:o`
 
 Every skinContactList is represented with the following format: (SKIN_CONTACT_VECTOR_1) ... (SKIN_CONTACT_VECTOR_N). There are as many SKIN_CONTACT_VECTORs as there were (clusters of) contacts detected on the whole skin of the robot by the skinManager. If case of no contact, the skinContactList is empty. If there was contact, every SKIN_CONTACT_VECTOR is enclosed by brackets and has the following format: ((contactId bodyPartId linkNumber skinPart) (centerOfPressure_x cOP_y cOP_z) (force_x f_y f_z) (moment_x m_y m_z) (geometricCenter_x gC_y gC_z) (surfaceNormalDirection_x sND_y sND_z) (activatedTaxelId1 aTId2 .. aTIdN) average_pressure). Here more information on some of the data:
 - bodyPart: the part of the body (TORSO=1, HEAD=2, LEFT_ARM=3, RIGHT_ARM=4, LEFT_LEG=5, RIGHT_LEG=6)

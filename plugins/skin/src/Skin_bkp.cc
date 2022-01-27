@@ -393,9 +393,6 @@ namespace gazebo
 
     void GazeboYarpSkin::OnWorldUpdate()
     {
-        // initialising taxelID
-        uint taxelId_link = 0;
-
         // set publish_data to false to prevent data output
         // from non taxels
         bool publish_data = false;
@@ -420,45 +417,78 @@ namespace gazebo
         skinContactList.clear();
 
         // every fingertip is taken as a single contact sensor
+        // m_contactSensors.size() = 6 (5 finger + palm)
+        std::cout << "switching hand\n"
+                  << std::endl;
         for (size_t i = 0; i < m_contactSensors.size(); i++)
         {
             ContactSensor &sensor = m_contactSensors[i];
             msgs::Contacts contacts = sensor.sensor->Contacts();
+            unsigned int collision_count = sensor.sensor->GetCollisionCount();
+            // Get the number of collisions that the sensor is observing. (https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/classgazebo_1_1sensors_1_1ContactSensor.html#ae0ef4f0b0232cc0d4ab6c9a1d42b9c2d)
+            std::cout << "contact_count: " << collision_count << std::endl; // returns always 1
+            for (size_t collision_counter = 0; collision_counter < collision_count; collision_counter++)
+            {
+                std::string collision_name = sensor.sensor->GetCollisionName(collision_counter);
+                std::cout << "collision_name: " << collision_name << std::endl;
+                unsigned int collision_contact_count = sensor.sensor->GetCollisionContactCount(collision_name);
+                // Return the number of contacts for an observed collision. (https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/classgazebo_1_1sensors_1_1ContactSensor.html#afabffb9fe7a9a71bdce58afed1227cf2)
+                std::cout << "collision_contact_count: " << collision_contact_count << std::endl; // returns always more than 1
+            }
 
             // Skip to next sensor if no contacts
             if (contacts.contact_size() == 0)
-                std::cout << "skipping sensor nr: " << i+1 << " of: " << m_contactSensors.size() << std::endl;
+            {
+                std::cout << "skipping sensor nr: " << i << " of: " << m_contactSensors.size() << std::endl;
                 continue;
-            std::cout << "detected " << contacts.contact_size() << " contacts at sensor nr: " << i+1 << std::endl;
+            }
+            std::cout << "detected " << contacts.contact_size() << " contacts at sensor nr: " << i << std::endl;
             // get pointer to the link
             gazebo::physics::LinkPtr link_name_ptr = m_model->GetLink("iCub::iCub::" + linksLocalNames[i]);
-            // std::cout << "linkLocalNames[i]: " << linksLocalNames[i] << std::endl;
+            std::cout << "linkLocalNames[i]: " << linksLocalNames[i] << std::endl;
 
             // get link coordinates by using the pointer to the model
             ignition::math::Pose3d link_coord;
             link_coord = link_name_ptr->WorldPose();
-            // std::cout << "linkCoordinates:" << link_coord << std::endl;
+            std::cout << "linkCoordinates:" << link_coord << std::endl;
 
             // every contact is treated independently
             // for (size_t k = 0; k < contacts.contact_size(); k++)
+            std::cout << "contacts.contact_size(): " << contacts.contact_size() << std::endl;
+            for (size_t j = 0; j < contacts.contact_size(); j++)
+            {
+                std::cout << "contacts.contact(j).position_size(): " << contacts.contact(j).position_size() << std::endl;
+                for (size_t k = 0; k < contacts.contact(j).position_size(); k++)
+                {
+                    std::cout << "contacts.contact(j).position(k): " << contacts.contact(j).position(k).x() << " " << contacts.contact(j).position(k).y() << " " << contacts.contact(j).position(k).z() << std::endl;
+                }
+            }
+            init_palm = true;
+            init_finger = true;
+
+            // TODO change to the double loop from above contact_size + position
             size_t j = 0;
             for (size_t k = 0; k < contacts.contact(j).position_size(); k++)
             {
-                std::cout << "contacts.contact_size(): " << contacts.contact_size() << std::endl;
-                std::cout << "contacts.contact(j).position_size(): " << contacts.contact(j).position_size() << std::endl;
-                std::cout << "k: " << k << std::endl;
+                // initialising taxelID
+                uint taxelId_link = 0;
+
+                // std::cout << "contacts.contact_size(): " << contacts.contact_size() << std::endl;
+                // std::cout << "contacts.contact(j).position_size(): " << contacts.contact(j).position_size() << std::endl;
+                // std::cout << "k: " << k << std::endl;
                 // Extract position from message
                 auto position = contacts.contact(j).position(k);
                 // Convert to a pose with no rotation
                 ignition::math::Pose3d point(position.x(), position.y(), position.z(),
                                              0, 0, 0);
-                std::cout << "point: " << point << std::endl;
+                // std::cout << "point: " << point << std::endl;
 
                 // calculate the contact position at the fingertip
                 ignition::math::Pose3d cont_tip = point - link_coord;
                 // std::cout << "contact in Link Coordinates: \n" << cont_tip << std::endl;
 
                 // normal
+                // TODO transpose in respect to fingertip; yet in world frame!!!
                 yarp::sig::Vector normVector(3, 0.0);
                 normVector[0] = contacts.contact(j).normal(k).x();
                 normVector[1] = contacts.contact(j).normal(k).y();
@@ -475,260 +505,162 @@ namespace gazebo
                 auto force_res = sqrt(pow(forceVector[0], 2) + pow(forceVector[1], 2) + pow(forceVector[2], 2));
                 // std::cout << "force_res: " << force_res << std::endl;
 
-                // initialize gaussian
+                // initialize for gaussian (needed cause otherwise variables unkown down the code TODO improve)
                 double max_val_gau = 0;
+                double f_max = 0;
+                double m_lin = 0;
+                double b_lin = 0;
+                double sigma_max = 0;
+                double k_exp = 0;
+                double dist_th = 0;
+                auto taxel_placement = taxel_placement_finger.at(linksLocalNames[i]);
 
-                // compute taxel in contact for palm
+                // update init calculation with variable for palm or finger
                 if (linksLocalNames[i] == "r_hand" || linksLocalNames[i] == "l_hand")
                 {
-                    // std::cout << "calc sigma for palm!" << std::endl;
-                    if (calc_lin)
+                    f_max = f_max_palm;
+                    m_lin = m_lin_palm;
+                    b_lin = b_lin_palm;
+                    sigma_max = sigma_max_palm;
+                    k_exp = k_exp_palm;
+                    dist_th = dist_th_palm;
+                    auto taxel_placement = taxel_placement_palm.at(linksLocalNames[i]);
+                    if (init_palm)
                     {
-                        if (force_res < f_max_palm)
-                        {
-                            sigma = m_lin_palm * force_res + b_lin_palm;
-                        }
-                        else
-                        {
-                            sigma = sigma_max_palm;
-                        }
-                        // std::cout << "sigma: " << sigma << std::endl;
-                    }
-                    else if (calc_exp)
-                    {
-                        sigma = sigma_max_palm - sigma_max_palm * exp(k_exp_palm * force_res);
-                        // std::cout << "sigma: " << sigma << std::endl;
-                    }
-                    else if (calc_sig)
-                    {
-                        sigma = (1 / (1 + exp(-(2 * force_res - f_max_palm)))) * sigma_max_palm;
-                        // std::cout << "sigma: " << sigma << std::endl;
-                    }
-                    // safe max val of gaussian for normalization
-                    for (size_t l = 0; l < number_increments_lengths; l++)
-                    {
-                        double palm_lengths = -dist_th_palm + l * (2 * dist_th_palm / number_increments_lengths);
-                        // check if assigning a new variable is faster then to do the computation twice (memory vs. speed)
-                        if (exp(-(pow(palm_lengths, 2) / pow(2 * sigma, 2))) > max_val_gau)
-                        {
-                            max_val_gau = exp(-(pow(palm_lengths, 2) / pow(2 * sigma, 2)));
-                        }
-                        /*
-                        else
-                        {
-                            continue;
-                        }
-                        */
-                    }
-                    
-                    // init
-                    yarp::sig::Vector diffVector(3, 0.0);
-                    diffVector = {0.0, 0.0, 0.0};
-                    taxel_placement_palm.at(linksLocalNames[i])[4] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-                    // calc force per taxel
-                    for (size_t m = 0; m < taxel_placement_palm.at(linksLocalNames[i])[0].size(); m++)
-                    {
-                        // diff between contact position and taxel position
-                        // yarp::sig::Vector diffVector(3, 0.0);
-                        diffVector[0] = taxel_placement_palm.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X();
-                        diffVector[1] = taxel_placement_palm.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y();
-                        diffVector[2] = taxel_placement_palm.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z();
-                        ;
-
-                        // calc force according scaled gaussian
-                        force_tax = force_res * (exp(-((pow(taxel_placement_palm.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_palm.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_palm.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z(), 2) / pow(2 * sigma, 2)))) / max_val_gau);
-                        
-                        // store the highest force value per taxel per fingertip
-                        if (force_tax > taxel_placement_palm.at(linksLocalNames[i])[4][m])
-                        {
-                            taxel_placement_palm.at(linksLocalNames[i])[4][m] = force_tax;
-                        }
-                    }
-
-                    // transmit force per taxel
-                    for (size_t m = 0; m < taxel_placement_palm.at(linksLocalNames[i])[0].size(); m++)
-                    {
-                        taxelId_link = taxel_placement_palm.at(linksLocalNames[i])[0][m];
-                        // move out of this loop (event driven & conventional)! final force per taxel needs to be known after all contacts per fingertip are calculated
-                        if (event_driven)
-                        {
-                            auto delta_force = taxel_placement_palm.at(linksLocalNames[i])[4][m] - taxel_placement_palm.at(linksLocalNames[i])[5][m];
-                            taxel_placement_palm.at(linksLocalNames[i])[5][m] = force_tax;
-                            if (delta_force > delta_force_th_palm)
-                            {
-                                // calc # spikes
-                                if (spikes_lin)
-                                {
-                                    number_spikes = m_spikes * delta_force + b_spikes;
-                                }
-                                else
-                                {
-                                    number_spikes = number_spikes_max - number_spikes_max * exp(k_exp_spikes * delta_force);
-                                }
-                                // std::cout << "# of spikes: " << number_spikes << std::endl;
-                                // std::cout << "force: " << force_tax << " " << "delta force: " << delta_force << " " << "taxelID: " << taxelId_link << std::endl;
-                            }
-                        }
-                        else
-                        {
-                            if (force_tax > force_th_palm)
-                            {
-                                // write force_tax to variable at position taxelId_link
-                                // taxel_placement_palm.at(linksLocalNames[i])[4][m] = taxel_placement_palm.at(linksLocalNames[i])[4][m] + force_tax;
-
-                                // old code:
-                                // std::cout << "force at taxel: " << force_tax << " " << "taxelID: " << taxelId_link << std::endl;
-                                publish_data = true;
-
-                                iCub::skinDynLib::dynContact dynContact(sensor.bodyPart,
-                                                                        static_cast<int>(sensor.linkNumber),
-                                                                        yarp::sig::Vector(3, 0.0));
-                                iCub::skinDynLib::skinContact skinContact(dynContact);
-                                skinContact.setSkinPart(sensor.skinPart);
-                                skinContact.setGeoCenter(diffVector); // distance from center of taxel to contact position
-                                skinContact.setNormalDir(normVector); // only related to force_res
-                                skinContact.setForce(forceVector);    // irrelevant, only geo. mean of force is concidered
-                                skinContact.setPressure(force_tax);   // instead of pressure
-
-                                // Suppose each contact is due to one taxel only
-                                skinContact.setActiveTaxels(1); // in the actual implementaion only 1 works
-
-                                // Set the right taxel id depending on the finger
-                                // involved in the contact
-                                std::vector<unsigned int> taxelIds;
-                                taxelIds.push_back(sensor.taxelId + taxelId_link);
-                                skinContact.setTaxelList(taxelIds);
-
-                                // Add contact to the list
-                                skinContactList.push_back(skinContact);
-                            }
-                        }
+                        std::cout << "Init for palm!" << std::endl;
+                        taxel_placement_palm.at(linksLocalNames[i])[4] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+                        init_palm = false;
                     }
                 }
-                // compute taxel in contact for fingertips
                 else
                 {
-                    // std::cout << "calc sigma for finger!" << std::endl;
-                    if (calc_lin)
+                    f_max = f_max_finger;
+                    m_lin = m_lin_finger;
+                    b_lin = b_lin_finger;
+                    sigma_max = sigma_max_finger;
+                    k_exp = k_exp_finger;
+                    dist_th = dist_th_finger;
+                    auto taxel_placement = taxel_placement_finger.at(linksLocalNames[i]);
+                    if (init_finger)
                     {
-                        if (force_res < f_max_finger)
-                        {
-                            sigma = m_lin_finger * force_res + b_lin_finger;
-                        }
-                        else
-                        {
-                            sigma = sigma_max_finger;
-                        }
-                        // std::cout << "sigma: " << sigma << std::endl;
+                        std::cout << "Init for finger!" << std::endl;
+                        taxel_placement_finger.at(linksLocalNames[i])[4] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
                     }
-                    else if (calc_exp)
+                }
+                // std::cout << "calc. sigma" << std::endl;
+                if (calc_lin)
+                {
+                    if (force_res < f_max)
                     {
-                        sigma = sigma_max_finger - sigma_max_finger * exp(k_exp_finger * force_res);
-                        // std::cout << "sigma: " << sigma << std::endl;
+                        sigma = m_lin * force_res + b_lin;
                     }
-                    else if (calc_sig)
+                    else
                     {
-                        sigma = (1 / (1 + exp(-(2 * force_res - f_max_finger)))) * sigma_max_finger;
-                        // std::cout << "sigma: " << sigma << std::endl;
+                        sigma = sigma_max;
                     }
-                    // safe max val of gaussian for normalization
-                    for (size_t l = 0; l < number_increments_lengths; l++)
+                    // std::cout << "sigma: " << sigma << std::endl;
+                }
+                else if (calc_exp)
+                {
+                    sigma = sigma_max - sigma_max * exp(k_exp * force_res);
+                    // std::cout << "sigma: " << sigma << std::endl;
+                }
+                else if (calc_sig)
+                {
+                    sigma = (1 / (1 + exp(-(2 * force_res - f_max)))) * sigma_max;
+                    // std::cout << "sigma: " << sigma << std::endl;
+                }
+                // safe max. val. of gaussian for normalization
+                for (size_t l = 0; l < number_increments_lengths; l++)
+                {
+                    double calc_lengths = -dist_th + l * (2 * dist_th / number_increments_lengths);
+                    // TODO check if assigning a new variable is faster then to do the computation twice (memory vs. speed)
+                    if (exp(-(pow(calc_lengths, 2) / pow(2 * sigma, 2))) > max_val_gau)
                     {
-                        double finger_lengths = -dist_th_finger + l * (2 * dist_th_finger / number_increments_lengths);
-                        // check if assigning a new variable is faster then to do the computation twice (memory vs. speed)
-                        if (exp(-(pow(finger_lengths, 2) / pow(2 * sigma, 2))) > max_val_gau)
-                        {
-                            max_val_gau = exp(-(pow(finger_lengths, 2) / pow(2 * sigma, 2)));
-                        }
-                        /*
-                        else
-                        {
-                            continue;
-                        }
-                        */
+                        max_val_gau = exp(-(pow(calc_lengths, 2) / pow(2 * sigma, 2)));
                     }
-                    
-                    // init
-                    yarp::sig::Vector diffVector(3, 0.0);
-                    diffVector = {0.0, 0.0, 0.0};
-                    taxel_placement_finger.at(linksLocalNames[i])[4] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-                    // calc force per taxel
-                    for (size_t m = 0; m < taxel_placement_finger.at(linksLocalNames[i])[0].size(); m++)
-                    {
-                        // diff between contact position and taxel position
-                        // yarp::sig::Vector diffVector(3, 0.0);
-                        diffVector[0] = taxel_placement_finger.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X();
-                        diffVector[1] = taxel_placement_finger.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y();
-                        diffVector[2] = taxel_placement_finger.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z();
-                        ;
+                }
 
-                        // calc force according scaled gaussian
-                        force_tax = force_res * (exp(-((pow(taxel_placement_finger.at(linksLocalNames[i])[1][m] - cont_tip.Pos().X(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_finger.at(linksLocalNames[i])[2][m] - cont_tip.Pos().Y(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement_finger.at(linksLocalNames[i])[3][m] - cont_tip.Pos().Z(), 2) / pow(2 * sigma, 2)))) / max_val_gau);
-                        
-                        // store the highest force value per taxel per fingertip
-                        if (force_tax > taxel_placement_finger.at(linksLocalNames[i])[4][m])
-                        {
-                            taxel_placement_finger.at(linksLocalNames[i])[4][m] = force_tax;
-                        }
-                    }
+                // init
+                yarp::sig::Vector diffVector(3, 0.0);
+                diffVector = {0.0, 0.0, 0.0};
 
-                    // transmit force per taxel
-                    for (size_t m = 0; m < taxel_placement_finger.at(linksLocalNames[i])[0].size(); m++)
+                // calc force per taxel
+                for (size_t m = 0; m < taxel_placement[0].size(); m++)
+                {
+                    // diff between contact position and taxel position
+                    // yarp::sig::Vector diffVector(3, 0.0);
+                    diffVector[0] = taxel_placement[1][m] - cont_tip.Pos().X();
+                    diffVector[1] = taxel_placement[2][m] - cont_tip.Pos().Y();
+                    diffVector[2] = taxel_placement[3][m] - cont_tip.Pos().Z();
+                    ;
+
+                    // calc force according scaled gaussian
+                    force_tax = force_res * (exp(-((pow(taxel_placement[1][m] - cont_tip.Pos().X(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement[2][m] - cont_tip.Pos().Y(), 2) / pow(2 * sigma, 2)) + (pow(taxel_placement[3][m] - cont_tip.Pos().Z(), 2) / pow(2 * sigma, 2)))) / max_val_gau);
+
+                    // store the highest force value per taxel per fingertip
+                    if (force_tax > taxel_placement[4][m])
                     {
-                        taxelId_link = taxel_placement_finger.at(linksLocalNames[i])[0][m];
-                        // move out of this loop (event driven & conventional)! final force per taxel needs to be known after all contacts per fingertip are calculated
-                        if (event_driven)
+                        taxel_placement[4][m] = force_tax;
+                    }
+                }
+
+                // transmit force per taxel
+                for (size_t m = 0; m < taxel_placement[0].size(); m++)
+                {
+                    taxelId_link = taxel_placement[0][m];
+                    // move out of this loop (event driven & conventional)! final force per taxel needs to be known after all contacts per fingertip are calculated
+                    if (event_driven)
+                    {
+                        auto delta_force = taxel_placement[4][m] - taxel_placement[5][m];
+                        taxel_placement[5][m] = force_tax;
+                        if (delta_force > delta_force_th_palm)
                         {
-                            auto delta_force = taxel_placement_finger.at(linksLocalNames[i])[4][m] - taxel_placement_finger.at(linksLocalNames[i])[5][m];
-                            taxel_placement_finger.at(linksLocalNames[i])[5][m] = force_tax;
-                            if (delta_force > delta_force_th_finger)
+                            // calc # spikes
+                            if (spikes_lin)
                             {
-                                // calc # spikes
-                                if (spikes_lin)
-                                {
-                                    number_spikes = m_spikes * delta_force + b_spikes;
-                                }
-                                else
-                                {
-                                    number_spikes = number_spikes_max - number_spikes_max * exp(k_exp_spikes * delta_force);
-                                }
-                                // std::cout << "# of spikes: " << number_spikes << std::endl;
-                                // std::cout << "force: " << force_tax << " " << "delta force: " << delta_force << " " << "taxelID: " << taxelId_link << std::endl;
+                                number_spikes = m_spikes * delta_force + b_spikes;
                             }
-                        }
-                        else
-                        {
-                            if (force_tax > force_th_finger)
+                            else
                             {
-                                // write force_tax to variable at position taxelId_link
-                                // taxel_placement_finger.at(linksLocalNames[i])[4][m] = taxel_placement_finger.at(linksLocalNames[i])[4][m] + force_tax;
-
-                                // old code:
-                                // std::cout << "force at taxel: " << force_tax << " " << "taxelID: " << taxelId_link << std::endl;
-                                publish_data = true;
-
-                                iCub::skinDynLib::dynContact dynContact(sensor.bodyPart,
-                                                                        static_cast<int>(sensor.linkNumber),
-                                                                        yarp::sig::Vector(3, 0.0));
-                                iCub::skinDynLib::skinContact skinContact(dynContact);
-                                skinContact.setSkinPart(sensor.skinPart);
-                                skinContact.setGeoCenter(diffVector); // distance from center of taxel to contact position
-                                skinContact.setNormalDir(normVector); // only related to force_res
-                                skinContact.setForce(forceVector);    // irrelevant, only geo. mean of force is concidered
-                                skinContact.setPressure(force_tax);   // instead of pressure
-
-                                // Suppose each contact is due to one taxel only
-                                skinContact.setActiveTaxels(1); // in the actual implementaion only 1 works
-
-                                // Set the right taxel id depending on the finger
-                                // involved in the contact
-                                std::vector<unsigned int> taxelIds;
-                                taxelIds.push_back(sensor.taxelId + taxelId_link);
-                                skinContact.setTaxelList(taxelIds);
-
-                                // Add contact to the list
-                                skinContactList.push_back(skinContact);
+                                number_spikes = number_spikes_max - number_spikes_max * exp(k_exp_spikes * delta_force);
                             }
+                            // std::cout << "# of spikes: " << number_spikes << std::endl;
+                            // std::cout << "force: " << force_tax << " " << "delta force: " << delta_force << " " << "taxelID: " << taxelId_link << std::endl;
+                        }
+                    }
+                    else
+                    {
+                        if (force_tax > force_th_palm)
+                        {
+                            // write force_tax to variable at position taxelId_link
+                            // taxel_placement[4][m] = taxel_placement[4][m] + force_tax;
+
+                            // old code:
+                            // std::cout << "force at taxel: " << force_tax << " " << "taxelID: " << taxelId_link << std::endl;
+                            publish_data = true;
+
+                            iCub::skinDynLib::dynContact dynContact(sensor.bodyPart,
+                                                                    static_cast<int>(sensor.linkNumber),
+                                                                    yarp::sig::Vector(3, 0.0));
+                            iCub::skinDynLib::skinContact skinContact(dynContact);
+                            skinContact.setSkinPart(sensor.skinPart);
+                            skinContact.setGeoCenter(diffVector); // distance from center of taxel to contact position
+                            skinContact.setNormalDir(normVector); // only related to force_res
+                            skinContact.setForce(forceVector);    // irrelevant, only geo. mean of force is concidered
+                            skinContact.setPressure(force_tax);   // instead of pressure
+
+                            // Suppose each contact is due to one taxel only
+                            skinContact.setActiveTaxels(1); // in the actual implementaion only 1 works
+
+                            // Set the right taxel id depending on the finger
+                            // involved in the contact
+                            std::vector<unsigned int> taxelIds;
+                            taxelIds.push_back(sensor.taxelId + taxelId_link);
+                            skinContact.setTaxelList(taxelIds);
+
+                            // Add contact to the list
+                            skinContactList.push_back(skinContact);
                         }
                     }
                 }

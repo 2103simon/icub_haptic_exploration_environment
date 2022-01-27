@@ -37,10 +37,10 @@
         <model name="to_be_followed">
         <include>
             <uri>
-                model://cf_line_2d
+                model://br_A
             </uri>
             <pose>
-                0.3 0.0 0.5 0.0 0.0 0.0
+                0.3 0.0 0.5 1.57 0.0 -3.14
             </pose>
         </include>
         <joint name="tbf_fixed_joint" type="fixed">
@@ -48,7 +48,7 @@
             world
           </parent>
           <child>
-            to_be_followed::line_2d::line_2d_root_link
+            to_be_followed::A::A_root_link
           </child>
         </joint>
         </model>

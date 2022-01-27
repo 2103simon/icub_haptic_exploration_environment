@@ -1,0 +1,663 @@
+contact_count: 1
+collision_name: iCub::iCub::r_hand_index_3::r_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 0 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_middle_3::r_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_ring_3::r_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_little_3::r_hand_little_3_collision
+collision_contact_count: 150
+detected 15 contacts at sensor nr: 3
+linkLocalNames[i]: r_hand_little_3
+linkCoordinates:0.215178 -0.298496 0.514527 -0.781132 0.515238 -0.570465
+contacts.contact_size(): 15
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227223 -0.306254 0.5
+contacts.contact(j).position(k): 0.228297 -0.305324 0.5
+contacts.contact(j).position(k): 0.229018 -0.306158 0.499716
+contacts.contact(j).position(k): 0.228919 -0.305183 0.5
+contacts.contact(j).position(k): 0.22849 -0.307792 0.5
+contacts.contact(j).position(k): 0.229337 -0.307697 0.5
+contacts.contact(j).position(k): 0.229899 -0.305509 0.5
+contacts.contact(j).position(k): 0.230651 -0.306688 0.5
+contacts.contact(j).position(k): 0.230592 -0.307039 0.499938
+contacts.contact(j).position(k): 0.230355 -0.30745 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227201 -0.306276 0.5
+contacts.contact(j).position(k): 0.228273 -0.305347 0.5
+contacts.contact(j).position(k): 0.228992 -0.30618 0.499716
+contacts.contact(j).position(k): 0.228893 -0.305206 0.5
+contacts.contact(j).position(k): 0.228464 -0.307815 0.5
+contacts.contact(j).position(k): 0.229312 -0.307721 0.5
+contacts.contact(j).position(k): 0.229873 -0.305531 0.5
+contacts.contact(j).position(k): 0.230626 -0.306707 0.5
+contacts.contact(j).position(k): 0.230567 -0.307061 0.499937
+contacts.contact(j).position(k): 0.230328 -0.307475 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.22718 -0.306299 0.5
+contacts.contact(j).position(k): 0.228249 -0.305372 0.5
+contacts.contact(j).position(k): 0.228967 -0.306203 0.499716
+contacts.contact(j).position(k): 0.228868 -0.305231 0.5
+contacts.contact(j).position(k): 0.22844 -0.307837 0.5
+contacts.contact(j).position(k): 0.229287 -0.307743 0.5
+contacts.contact(j).position(k): 0.229847 -0.305554 0.5
+contacts.contact(j).position(k): 0.230601 -0.30673 0.5
+contacts.contact(j).position(k): 0.230542 -0.307084 0.499937
+contacts.contact(j).position(k): 0.230303 -0.307499 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227158 -0.306323 0.5
+contacts.contact(j).position(k): 0.228225 -0.305397 0.5
+contacts.contact(j).position(k): 0.228942 -0.306226 0.499716
+contacts.contact(j).position(k): 0.228844 -0.305256 0.5
+contacts.contact(j).position(k): 0.228416 -0.307859 0.5
+contacts.contact(j).position(k): 0.229263 -0.307767 0.5
+contacts.contact(j).position(k): 0.229822 -0.305578 0.5
+contacts.contact(j).position(k): 0.230576 -0.306754 0.5
+contacts.contact(j).position(k): 0.230517 -0.307108 0.499937
+contacts.contact(j).position(k): 0.230278 -0.307523 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227137 -0.306347 0.5
+contacts.contact(j).position(k): 0.228202 -0.305423 0.5
+contacts.contact(j).position(k): 0.228918 -0.306251 0.499717
+contacts.contact(j).position(k): 0.228819 -0.305282 0.5
+contacts.contact(j).position(k): 0.228392 -0.307882 0.5
+contacts.contact(j).position(k): 0.229238 -0.307789 0.5
+contacts.contact(j).position(k): 0.229797 -0.305604 0.5
+contacts.contact(j).position(k): 0.230552 -0.306779 0.5
+contacts.contact(j).position(k): 0.230493 -0.307132 0.499937
+contacts.contact(j).position(k): 0.230255 -0.307546 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227116 -0.306372 0.5
+contacts.contact(j).position(k): 0.228179 -0.305449 0.5
+contacts.contact(j).position(k): 0.228894 -0.306276 0.499717
+contacts.contact(j).position(k): 0.228795 -0.305308 0.5
+contacts.contact(j).position(k): 0.228369 -0.307905 0.5
+contacts.contact(j).position(k): 0.229214 -0.307813 0.5
+contacts.contact(j).position(k): 0.229772 -0.305629 0.5
+contacts.contact(j).position(k): 0.230528 -0.306805 0.5
+contacts.contact(j).position(k): 0.230469 -0.307157 0.499938
+contacts.contact(j).position(k): 0.230232 -0.307569 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227095 -0.306397 0.5
+contacts.contact(j).position(k): 0.228156 -0.305475 0.5
+contacts.contact(j).position(k): 0.22887 -0.306301 0.499717
+contacts.contact(j).position(k): 0.228772 -0.305334 0.5
+contacts.contact(j).position(k): 0.228346 -0.307928 0.5
+contacts.contact(j).position(k): 0.229189 -0.307836 0.5
+contacts.contact(j).position(k): 0.229747 -0.305655 0.5
+contacts.contact(j).position(k): 0.230503 -0.306832 0.5
+contacts.contact(j).position(k): 0.230445 -0.307182 0.499938
+contacts.contact(j).position(k): 0.230209 -0.307593 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227074 -0.306423 0.5
+contacts.contact(j).position(k): 0.228133 -0.305502 0.5
+contacts.contact(j).position(k): 0.228846 -0.306327 0.499718
+contacts.contact(j).position(k): 0.228748 -0.305361 0.5
+contacts.contact(j).position(k): 0.228323 -0.307951 0.5
+contacts.contact(j).position(k): 0.229165 -0.30786 0.5
+contacts.contact(j).position(k): 0.229723 -0.305681 0.5
+contacts.contact(j).position(k): 0.23048 -0.306859 0.5
+contacts.contact(j).position(k): 0.230421 -0.307208 0.499938
+contacts.contact(j).position(k): 0.230186 -0.307617 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227052 -0.306448 0.5
+contacts.contact(j).position(k): 0.22811 -0.305528 0.5
+contacts.contact(j).position(k): 0.228823 -0.306353 0.499718
+contacts.contact(j).position(k): 0.228725 -0.305387 0.5
+contacts.contact(j).position(k): 0.2283 -0.307975 0.5
+contacts.contact(j).position(k): 0.229142 -0.307885 0.5
+contacts.contact(j).position(k): 0.229699 -0.305707 0.5
+contacts.contact(j).position(k): 0.230456 -0.306885 0.5
+contacts.contact(j).position(k): 0.230398 -0.307234 0.499938
+contacts.contact(j).position(k): 0.230163 -0.307641 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227032 -0.306474 0.5
+contacts.contact(j).position(k): 0.228088 -0.305555 0.5
+contacts.contact(j).position(k): 0.228799 -0.306378 0.499718
+contacts.contact(j).position(k): 0.228702 -0.305414 0.5
+contacts.contact(j).position(k): 0.228277 -0.307998 0.5
+contacts.contact(j).position(k): 0.229118 -0.307908 0.5
+contacts.contact(j).position(k): 0.229675 -0.305733 0.5
+contacts.contact(j).position(k): 0.230432 -0.306912 0.5
+contacts.contact(j).position(k): 0.230374 -0.30726 0.499938
+contacts.contact(j).position(k): 0.230141 -0.307666 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227009 -0.3065 0.5
+contacts.contact(j).position(k): 0.228065 -0.305581 0.5
+contacts.contact(j).position(k): 0.228776 -0.306404 0.499718
+contacts.contact(j).position(k): 0.228678 -0.30544 0.5
+contacts.contact(j).position(k): 0.228254 -0.308023 0.5
+contacts.contact(j).position(k): 0.229094 -0.307933 0.5
+contacts.contact(j).position(k): 0.229652 -0.305759 0.5
+contacts.contact(j).position(k): 0.230409 -0.306938 0.5
+contacts.contact(j).position(k): 0.230351 -0.307286 0.499939
+contacts.contact(j).position(k): 0.230118 -0.307691 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226988 -0.306525 0.5
+contacts.contact(j).position(k): 0.228042 -0.305607 0.5
+contacts.contact(j).position(k): 0.228753 -0.30643 0.499719
+contacts.contact(j).position(k): 0.228655 -0.305466 0.5
+contacts.contact(j).position(k): 0.228231 -0.308047 0.5
+contacts.contact(j).position(k): 0.229071 -0.307958 0.5
+contacts.contact(j).position(k): 0.229628 -0.305785 0.5
+contacts.contact(j).position(k): 0.230386 -0.306965 0.5
+contacts.contact(j).position(k): 0.230327 -0.307311 0.499939
+contacts.contact(j).position(k): 0.230095 -0.307715 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226954 -0.30655 0.5
+contacts.contact(j).position(k): 0.228014 -0.305626 0.5
+contacts.contact(j).position(k): 0.228729 -0.306455 0.499717
+contacts.contact(j).position(k): 0.228632 -0.305484 0.5
+contacts.contact(j).position(k): 0.228206 -0.308074 0.5
+contacts.contact(j).position(k): 0.229047 -0.307984 0.5
+contacts.contact(j).position(k): 0.229609 -0.305807 0.5
+contacts.contact(j).position(k): 0.230362 -0.306987 0.5
+contacts.contact(j).position(k): 0.230304 -0.307337 0.499938
+contacts.contact(j).position(k): 0.23007 -0.307742 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226937 -0.306574 0.5
+contacts.contact(j).position(k): 0.227993 -0.305654 0.5
+contacts.contact(j).position(k): 0.228706 -0.30648 0.499718
+contacts.contact(j).position(k): 0.228608 -0.305512 0.5
+contacts.contact(j).position(k): 0.228184 -0.308095 0.5
+contacts.contact(j).position(k): 0.229023 -0.308006 0.5
+contacts.contact(j).position(k): 0.229584 -0.305834 0.5
+contacts.contact(j).position(k): 0.230339 -0.307014 0.5
+contacts.contact(j).position(k): 0.23028 -0.307362 0.499939
+contacts.contact(j).position(k): 0.230049 -0.307764 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226916 -0.306599 0.5
+contacts.contact(j).position(k): 0.22797 -0.305679 0.5
+contacts.contact(j).position(k): 0.228683 -0.306504 0.499718
+contacts.contact(j).position(k): 0.228585 -0.305538 0.5
+contacts.contact(j).position(k): 0.228161 -0.30812 0.5
+contacts.contact(j).position(k): 0.229 -0.308031 0.5
+contacts.contact(j).position(k): 0.22956 -0.305859 0.5
+contacts.contact(j).position(k): 0.230316 -0.307038 0.5
+contacts.contact(j).position(k): 0.230257 -0.307386 0.499939
+contacts.contact(j).position(k): 0.230025 -0.30779 0.5
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+contact_count: 1
+collision_name: iCub::iCub::r_hand_thumb_3::r_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand::r_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::l_hand_index_3::l_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 0 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_middle_3::l_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_ring_3::l_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_little_3::l_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_thumb_3::l_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand::l_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::r_hand_index_3::r_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 0 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_middle_3::r_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_ring_3::r_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_little_3::r_hand_little_3_collision
+collision_contact_count: 150
+detected 15 contacts at sensor nr: 3
+linkLocalNames[i]: r_hand_little_3
+linkCoordinates:0.215176 -0.298496 0.514858 -0.781107 0.515087 -0.570378
+contacts.contact_size(): 15
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227223 -0.306254 0.5
+contacts.contact(j).position(k): 0.228297 -0.305324 0.5
+contacts.contact(j).position(k): 0.229018 -0.306158 0.499716
+contacts.contact(j).position(k): 0.228919 -0.305183 0.5
+contacts.contact(j).position(k): 0.22849 -0.307792 0.5
+contacts.contact(j).position(k): 0.229337 -0.307697 0.5
+contacts.contact(j).position(k): 0.229899 -0.305509 0.5
+contacts.contact(j).position(k): 0.230651 -0.306688 0.5
+contacts.contact(j).position(k): 0.230592 -0.307039 0.499938
+contacts.contact(j).position(k): 0.230355 -0.30745 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227201 -0.306276 0.5
+contacts.contact(j).position(k): 0.228273 -0.305347 0.5
+contacts.contact(j).position(k): 0.228992 -0.30618 0.499716
+contacts.contact(j).position(k): 0.228893 -0.305206 0.5
+contacts.contact(j).position(k): 0.228464 -0.307815 0.5
+contacts.contact(j).position(k): 0.229312 -0.307721 0.5
+contacts.contact(j).position(k): 0.229873 -0.305531 0.5
+contacts.contact(j).position(k): 0.230626 -0.306707 0.5
+contacts.contact(j).position(k): 0.230567 -0.307061 0.499937
+contacts.contact(j).position(k): 0.230328 -0.307475 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.22718 -0.306299 0.5
+contacts.contact(j).position(k): 0.228249 -0.305372 0.5
+contacts.contact(j).position(k): 0.228967 -0.306203 0.499716
+contacts.contact(j).position(k): 0.228868 -0.305231 0.5
+contacts.contact(j).position(k): 0.22844 -0.307837 0.5
+contacts.contact(j).position(k): 0.229287 -0.307743 0.5
+contacts.contact(j).position(k): 0.229847 -0.305554 0.5
+contacts.contact(j).position(k): 0.230601 -0.30673 0.5
+contacts.contact(j).position(k): 0.230542 -0.307084 0.499937
+contacts.contact(j).position(k): 0.230303 -0.307499 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227158 -0.306323 0.5
+contacts.contact(j).position(k): 0.228225 -0.305397 0.5
+contacts.contact(j).position(k): 0.228942 -0.306226 0.499716
+contacts.contact(j).position(k): 0.228844 -0.305256 0.5
+contacts.contact(j).position(k): 0.228416 -0.307859 0.5
+contacts.contact(j).position(k): 0.229263 -0.307767 0.5
+contacts.contact(j).position(k): 0.229822 -0.305578 0.5
+contacts.contact(j).position(k): 0.230576 -0.306754 0.5
+contacts.contact(j).position(k): 0.230517 -0.307108 0.499937
+contacts.contact(j).position(k): 0.230278 -0.307523 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227137 -0.306347 0.5
+contacts.contact(j).position(k): 0.228202 -0.305423 0.5
+contacts.contact(j).position(k): 0.228918 -0.306251 0.499717
+contacts.contact(j).position(k): 0.228819 -0.305282 0.5
+contacts.contact(j).position(k): 0.228392 -0.307882 0.5
+contacts.contact(j).position(k): 0.229238 -0.307789 0.5
+contacts.contact(j).position(k): 0.229797 -0.305604 0.5
+contacts.contact(j).position(k): 0.230552 -0.306779 0.5
+contacts.contact(j).position(k): 0.230493 -0.307132 0.499937
+contacts.contact(j).position(k): 0.230255 -0.307546 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227116 -0.306372 0.5
+contacts.contact(j).position(k): 0.228179 -0.305449 0.5
+contacts.contact(j).position(k): 0.228894 -0.306276 0.499717
+contacts.contact(j).position(k): 0.228795 -0.305308 0.5
+contacts.contact(j).position(k): 0.228369 -0.307905 0.5
+contacts.contact(j).position(k): 0.229214 -0.307813 0.5
+contacts.contact(j).position(k): 0.229772 -0.305629 0.5
+contacts.contact(j).position(k): 0.230528 -0.306805 0.5
+contacts.contact(j).position(k): 0.230469 -0.307157 0.499938
+contacts.contact(j).position(k): 0.230232 -0.307569 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227095 -0.306397 0.5
+contacts.contact(j).position(k): 0.228156 -0.305475 0.5
+contacts.contact(j).position(k): 0.22887 -0.306301 0.499717
+contacts.contact(j).position(k): 0.228772 -0.305334 0.5
+contacts.contact(j).position(k): 0.228346 -0.307928 0.5
+contacts.contact(j).position(k): 0.229189 -0.307836 0.5
+contacts.contact(j).position(k): 0.229747 -0.305655 0.5
+contacts.contact(j).position(k): 0.230503 -0.306832 0.5
+contacts.contact(j).position(k): 0.230445 -0.307182 0.499938
+contacts.contact(j).position(k): 0.230209 -0.307593 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227074 -0.306423 0.5
+contacts.contact(j).position(k): 0.228133 -0.305502 0.5
+contacts.contact(j).position(k): 0.228846 -0.306327 0.499718
+contacts.contact(j).position(k): 0.228748 -0.305361 0.5
+contacts.contact(j).position(k): 0.228323 -0.307951 0.5
+contacts.contact(j).position(k): 0.229165 -0.30786 0.5
+contacts.contact(j).position(k): 0.229723 -0.305681 0.5
+contacts.contact(j).position(k): 0.23048 -0.306859 0.5
+contacts.contact(j).position(k): 0.230421 -0.307208 0.499938
+contacts.contact(j).position(k): 0.230186 -0.307617 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227052 -0.306448 0.5
+contacts.contact(j).position(k): 0.22811 -0.305528 0.5
+contacts.contact(j).position(k): 0.228823 -0.306353 0.499718
+contacts.contact(j).position(k): 0.228725 -0.305387 0.5
+contacts.contact(j).position(k): 0.2283 -0.307975 0.5
+contacts.contact(j).position(k): 0.229142 -0.307885 0.5
+contacts.contact(j).position(k): 0.229699 -0.305707 0.5
+contacts.contact(j).position(k): 0.230456 -0.306885 0.5
+contacts.contact(j).position(k): 0.230398 -0.307234 0.499938
+contacts.contact(j).position(k): 0.230163 -0.307641 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227032 -0.306474 0.5
+contacts.contact(j).position(k): 0.228088 -0.305555 0.5
+contacts.contact(j).position(k): 0.228799 -0.306378 0.499718
+contacts.contact(j).position(k): 0.228702 -0.305414 0.5
+contacts.contact(j).position(k): 0.228277 -0.307998 0.5
+contacts.contact(j).position(k): 0.229118 -0.307908 0.5
+contacts.contact(j).position(k): 0.229675 -0.305733 0.5
+contacts.contact(j).position(k): 0.230432 -0.306912 0.5
+contacts.contact(j).position(k): 0.230374 -0.30726 0.499938
+contacts.contact(j).position(k): 0.230141 -0.307666 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227009 -0.3065 0.5
+contacts.contact(j).position(k): 0.228065 -0.305581 0.5
+contacts.contact(j).position(k): 0.228776 -0.306404 0.499718
+contacts.contact(j).position(k): 0.228678 -0.30544 0.5
+contacts.contact(j).position(k): 0.228254 -0.308023 0.5
+contacts.contact(j).position(k): 0.229094 -0.307933 0.5
+contacts.contact(j).position(k): 0.229652 -0.305759 0.5
+contacts.contact(j).position(k): 0.230409 -0.306938 0.5
+contacts.contact(j).position(k): 0.230351 -0.307286 0.499939
+contacts.contact(j).position(k): 0.230118 -0.307691 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226988 -0.306525 0.5
+contacts.contact(j).position(k): 0.228042 -0.305607 0.5
+contacts.contact(j).position(k): 0.228753 -0.30643 0.499719
+contacts.contact(j).position(k): 0.228655 -0.305466 0.5
+contacts.contact(j).position(k): 0.228231 -0.308047 0.5
+contacts.contact(j).position(k): 0.229071 -0.307958 0.5
+contacts.contact(j).position(k): 0.229628 -0.305785 0.5
+contacts.contact(j).position(k): 0.230386 -0.306965 0.5
+contacts.contact(j).position(k): 0.230327 -0.307311 0.499939
+contacts.contact(j).position(k): 0.230095 -0.307715 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226954 -0.30655 0.5
+contacts.contact(j).position(k): 0.228014 -0.305626 0.5
+contacts.contact(j).position(k): 0.228729 -0.306455 0.499717
+contacts.contact(j).position(k): 0.228632 -0.305484 0.5
+contacts.contact(j).position(k): 0.228206 -0.308074 0.5
+contacts.contact(j).position(k): 0.229047 -0.307984 0.5
+contacts.contact(j).position(k): 0.229609 -0.305807 0.5
+contacts.contact(j).position(k): 0.230362 -0.306987 0.5
+contacts.contact(j).position(k): 0.230304 -0.307337 0.499938
+contacts.contact(j).position(k): 0.23007 -0.307742 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226937 -0.306574 0.5
+contacts.contact(j).position(k): 0.227993 -0.305654 0.5
+contacts.contact(j).position(k): 0.228706 -0.30648 0.499718
+contacts.contact(j).position(k): 0.228608 -0.305512 0.5
+contacts.contact(j).position(k): 0.228184 -0.308095 0.5
+contacts.contact(j).position(k): 0.229023 -0.308006 0.5
+contacts.contact(j).position(k): 0.229584 -0.305834 0.5
+contacts.contact(j).position(k): 0.230339 -0.307014 0.5
+contacts.contact(j).position(k): 0.23028 -0.307362 0.499939
+contacts.contact(j).position(k): 0.230049 -0.307764 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226916 -0.306599 0.5
+contacts.contact(j).position(k): 0.22797 -0.305679 0.5
+contacts.contact(j).position(k): 0.228683 -0.306504 0.499718
+contacts.contact(j).position(k): 0.228585 -0.305538 0.5
+contacts.contact(j).position(k): 0.228161 -0.30812 0.5
+contacts.contact(j).position(k): 0.229 -0.308031 0.5
+contacts.contact(j).position(k): 0.22956 -0.305859 0.5
+contacts.contact(j).position(k): 0.230316 -0.307038 0.5
+contacts.contact(j).position(k): 0.230257 -0.307386 0.499939
+contacts.contact(j).position(k): 0.230025 -0.30779 0.5
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+contact_count: 1
+collision_name: iCub::iCub::r_hand_thumb_3::r_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand::r_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::l_hand_index_3::l_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 0 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_middle_3::l_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_ring_3::l_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_little_3::l_hand_little_3_collision
+collision_contact_count: 0
+skipping sensor nr: 3 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand_thumb_3::l_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::l_hand::l_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+switching hand
+
+contact_count: 1
+collision_name: iCub::iCub::r_hand_index_3::r_hand_index_3_collision
+collision_contact_count: 0
+skipping sensor nr: 0 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_middle_3::r_hand_middle_3_collision
+collision_contact_count: 0
+skipping sensor nr: 1 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_ring_3::r_hand_ring_3_collision
+collision_contact_count: 0
+skipping sensor nr: 2 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand_little_3::r_hand_little_3_collision
+collision_contact_count: 150
+detected 15 contacts at sensor nr: 3
+linkLocalNames[i]: r_hand_little_3
+linkCoordinates:0.215157 -0.298521 0.51453 -0.781124 0.515387 -0.570374
+contacts.contact_size(): 15
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227223 -0.306254 0.5
+contacts.contact(j).position(k): 0.228297 -0.305324 0.5
+contacts.contact(j).position(k): 0.229018 -0.306158 0.499716
+contacts.contact(j).position(k): 0.228919 -0.305183 0.5
+contacts.contact(j).position(k): 0.22849 -0.307792 0.5
+contacts.contact(j).position(k): 0.229337 -0.307697 0.5
+contacts.contact(j).position(k): 0.229899 -0.305509 0.5
+contacts.contact(j).position(k): 0.230651 -0.306688 0.5
+contacts.contact(j).position(k): 0.230592 -0.307039 0.499938
+contacts.contact(j).position(k): 0.230355 -0.30745 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227201 -0.306276 0.5
+contacts.contact(j).position(k): 0.228273 -0.305347 0.5
+contacts.contact(j).position(k): 0.228992 -0.30618 0.499716
+contacts.contact(j).position(k): 0.228893 -0.305206 0.5
+contacts.contact(j).position(k): 0.228464 -0.307815 0.5
+contacts.contact(j).position(k): 0.229312 -0.307721 0.5
+contacts.contact(j).position(k): 0.229873 -0.305531 0.5
+contacts.contact(j).position(k): 0.230626 -0.306707 0.5
+contacts.contact(j).position(k): 0.230567 -0.307061 0.499937
+contacts.contact(j).position(k): 0.230328 -0.307475 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.22718 -0.306299 0.5
+contacts.contact(j).position(k): 0.228249 -0.305372 0.5
+contacts.contact(j).position(k): 0.228967 -0.306203 0.499716
+contacts.contact(j).position(k): 0.228868 -0.305231 0.5
+contacts.contact(j).position(k): 0.22844 -0.307837 0.5
+contacts.contact(j).position(k): 0.229287 -0.307743 0.5
+contacts.contact(j).position(k): 0.229847 -0.305554 0.5
+contacts.contact(j).position(k): 0.230601 -0.30673 0.5
+contacts.contact(j).position(k): 0.230542 -0.307084 0.499937
+contacts.contact(j).position(k): 0.230303 -0.307499 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227158 -0.306323 0.5
+contacts.contact(j).position(k): 0.228225 -0.305397 0.5
+contacts.contact(j).position(k): 0.228942 -0.306226 0.499716
+contacts.contact(j).position(k): 0.228844 -0.305256 0.5
+contacts.contact(j).position(k): 0.228416 -0.307859 0.5
+contacts.contact(j).position(k): 0.229263 -0.307767 0.5
+contacts.contact(j).position(k): 0.229822 -0.305578 0.5
+contacts.contact(j).position(k): 0.230576 -0.306754 0.5
+contacts.contact(j).position(k): 0.230517 -0.307108 0.499937
+contacts.contact(j).position(k): 0.230278 -0.307523 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227137 -0.306347 0.5
+contacts.contact(j).position(k): 0.228202 -0.305423 0.5
+contacts.contact(j).position(k): 0.228918 -0.306251 0.499717
+contacts.contact(j).position(k): 0.228819 -0.305282 0.5
+contacts.contact(j).position(k): 0.228392 -0.307882 0.5
+contacts.contact(j).position(k): 0.229238 -0.307789 0.5
+contacts.contact(j).position(k): 0.229797 -0.305604 0.5
+contacts.contact(j).position(k): 0.230552 -0.306779 0.5
+contacts.contact(j).position(k): 0.230493 -0.307132 0.499937
+contacts.contact(j).position(k): 0.230255 -0.307546 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227116 -0.306372 0.5
+contacts.contact(j).position(k): 0.228179 -0.305449 0.5
+contacts.contact(j).position(k): 0.228894 -0.306276 0.499717
+contacts.contact(j).position(k): 0.228795 -0.305308 0.5
+contacts.contact(j).position(k): 0.228369 -0.307905 0.5
+contacts.contact(j).position(k): 0.229214 -0.307813 0.5
+contacts.contact(j).position(k): 0.229772 -0.305629 0.5
+contacts.contact(j).position(k): 0.230528 -0.306805 0.5
+contacts.contact(j).position(k): 0.230469 -0.307157 0.499938
+contacts.contact(j).position(k): 0.230232 -0.307569 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227095 -0.306397 0.5
+contacts.contact(j).position(k): 0.228156 -0.305475 0.5
+contacts.contact(j).position(k): 0.22887 -0.306301 0.499717
+contacts.contact(j).position(k): 0.228772 -0.305334 0.5
+contacts.contact(j).position(k): 0.228346 -0.307928 0.5
+contacts.contact(j).position(k): 0.229189 -0.307836 0.5
+contacts.contact(j).position(k): 0.229747 -0.305655 0.5
+contacts.contact(j).position(k): 0.230503 -0.306832 0.5
+contacts.contact(j).position(k): 0.230445 -0.307182 0.499938
+contacts.contact(j).position(k): 0.230209 -0.307593 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227074 -0.306423 0.5
+contacts.contact(j).position(k): 0.228133 -0.305502 0.5
+contacts.contact(j).position(k): 0.228846 -0.306327 0.499718
+contacts.contact(j).position(k): 0.228748 -0.305361 0.5
+contacts.contact(j).position(k): 0.228323 -0.307951 0.5
+contacts.contact(j).position(k): 0.229165 -0.30786 0.5
+contacts.contact(j).position(k): 0.229723 -0.305681 0.5
+contacts.contact(j).position(k): 0.23048 -0.306859 0.5
+contacts.contact(j).position(k): 0.230421 -0.307208 0.499938
+contacts.contact(j).position(k): 0.230186 -0.307617 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227052 -0.306448 0.5
+contacts.contact(j).position(k): 0.22811 -0.305528 0.5
+contacts.contact(j).position(k): 0.228823 -0.306353 0.499718
+contacts.contact(j).position(k): 0.228725 -0.305387 0.5
+contacts.contact(j).position(k): 0.2283 -0.307975 0.5
+contacts.contact(j).position(k): 0.229142 -0.307885 0.5
+contacts.contact(j).position(k): 0.229699 -0.305707 0.5
+contacts.contact(j).position(k): 0.230456 -0.306885 0.5
+contacts.contact(j).position(k): 0.230398 -0.307234 0.499938
+contacts.contact(j).position(k): 0.230163 -0.307641 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227032 -0.306474 0.5
+contacts.contact(j).position(k): 0.228088 -0.305555 0.5
+contacts.contact(j).position(k): 0.228799 -0.306378 0.499718
+contacts.contact(j).position(k): 0.228702 -0.305414 0.5
+contacts.contact(j).position(k): 0.228277 -0.307998 0.5
+contacts.contact(j).position(k): 0.229118 -0.307908 0.5
+contacts.contact(j).position(k): 0.229675 -0.305733 0.5
+contacts.contact(j).position(k): 0.230432 -0.306912 0.5
+contacts.contact(j).position(k): 0.230374 -0.30726 0.499938
+contacts.contact(j).position(k): 0.230141 -0.307666 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.227009 -0.3065 0.5
+contacts.contact(j).position(k): 0.228065 -0.305581 0.5
+contacts.contact(j).position(k): 0.228776 -0.306404 0.499718
+contacts.contact(j).position(k): 0.228678 -0.30544 0.5
+contacts.contact(j).position(k): 0.228254 -0.308023 0.5
+contacts.contact(j).position(k): 0.229094 -0.307933 0.5
+contacts.contact(j).position(k): 0.229652 -0.305759 0.5
+contacts.contact(j).position(k): 0.230409 -0.306938 0.5
+contacts.contact(j).position(k): 0.230351 -0.307286 0.499939
+contacts.contact(j).position(k): 0.230118 -0.307691 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226988 -0.306525 0.5
+contacts.contact(j).position(k): 0.228042 -0.305607 0.5
+contacts.contact(j).position(k): 0.228753 -0.30643 0.499719
+contacts.contact(j).position(k): 0.228655 -0.305466 0.5
+contacts.contact(j).position(k): 0.228231 -0.308047 0.5
+contacts.contact(j).position(k): 0.229071 -0.307958 0.5
+contacts.contact(j).position(k): 0.229628 -0.305785 0.5
+contacts.contact(j).position(k): 0.230386 -0.306965 0.5
+contacts.contact(j).position(k): 0.230327 -0.307311 0.499939
+contacts.contact(j).position(k): 0.230095 -0.307715 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226954 -0.30655 0.5
+contacts.contact(j).position(k): 0.228014 -0.305626 0.5
+contacts.contact(j).position(k): 0.228729 -0.306455 0.499717
+contacts.contact(j).position(k): 0.228632 -0.305484 0.5
+contacts.contact(j).position(k): 0.228206 -0.308074 0.5
+contacts.contact(j).position(k): 0.229047 -0.307984 0.5
+contacts.contact(j).position(k): 0.229609 -0.305807 0.5
+contacts.contact(j).position(k): 0.230362 -0.306987 0.5
+contacts.contact(j).position(k): 0.230304 -0.307337 0.499938
+contacts.contact(j).position(k): 0.23007 -0.307742 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226937 -0.306574 0.5
+contacts.contact(j).position(k): 0.227993 -0.305654 0.5
+contacts.contact(j).position(k): 0.228706 -0.30648 0.499718
+contacts.contact(j).position(k): 0.228608 -0.305512 0.5
+contacts.contact(j).position(k): 0.228184 -0.308095 0.5
+contacts.contact(j).position(k): 0.229023 -0.308006 0.5
+contacts.contact(j).position(k): 0.229584 -0.305834 0.5
+contacts.contact(j).position(k): 0.230339 -0.307014 0.5
+contacts.contact(j).position(k): 0.23028 -0.307362 0.499939
+contacts.contact(j).position(k): 0.230049 -0.307764 0.5
+contacts.contact(j).position_size(): 10
+contacts.contact(j).position(k): 0.226916 -0.306599 0.5
+contacts.contact(j).position(k): 0.22797 -0.305679 0.5
+contacts.contact(j).position(k): 0.228683 -0.306504 0.499718
+contacts.contact(j).position(k): 0.228585 -0.305538 0.5
+contacts.contact(j).position(k): 0.228161 -0.30812 0.5
+contacts.contact(j).position(k): 0.229 -0.308031 0.5
+contacts.contact(j).position(k): 0.22956 -0.305859 0.5
+contacts.contact(j).position(k): 0.230316 -0.307038 0.5
+contacts.contact(j).position(k): 0.230257 -0.307386 0.499939
+contacts.contact(j).position(k): 0.230025 -0.30779 0.5
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+Init for finger!
+contact_count: 1
+collision_name: iCub::iCub::r_hand_thumb_3::r_hand_thumb_3_collision
+collision_contact_count: 0
+skipping sensor nr: 4 of: 6
+contact_count: 1
+collision_name: iCub::iCub::r_hand::r_hand_collision
+collision_contact_count: 0
+skipping sensor nr: 5 of: 6
+switching hand

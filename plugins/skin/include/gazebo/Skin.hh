@@ -433,8 +433,9 @@ namespace gazebo
   double k_exp_palm = log(0.01) / f_max_palm;
   double m_lin_palm = sigma_max_palm / f_max_palm;
   double b_lin_palm = 0;
-  double force_th_palm = 0;
+  // double force_th_palm = 0;
   double delta_force_th_palm = 0;
+  bool init_finger = true;
 
   double dist_th_finger = 5e-3;
   double f_max_finger = 4.0;
@@ -444,6 +445,7 @@ namespace gazebo
   double b_lin_finger = 0;
   double force_th_finger = 0;
   double delta_force_th_finger = 0;
+  bool init_palm = true;
 
   double sigma;
 
@@ -454,6 +456,7 @@ namespace gazebo
   double b_spikes = 0;
 
   double force_tax;
+  double force_th = 0.01;
   size_t number_increments_lengths = 101;
 
   // variables for force distribution
