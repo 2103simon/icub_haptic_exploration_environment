@@ -40,7 +40,8 @@
                 model://br_A
             </uri>
             <pose>
-                0.3 0.0 0.5 1.57 0.0 -3.14
+                0.4 -0.15 0.5 1.57 0.0 -3.14 
+                <!-- 0.3 0.0 0.5 1.57 0.0 -3.14 -->
             </pose>
         </include>
         <joint name="tbf_fixed_joint" type="fixed">
