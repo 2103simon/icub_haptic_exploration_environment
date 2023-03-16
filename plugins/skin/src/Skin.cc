@@ -418,8 +418,8 @@ namespace gazebo
 
         // every fingertip is taken as a single contact sensor
         // m_contactSensors.size() = 6 (5 finger + palm)
-        // std::cout << "switching hand\n"
-        //           << std::endl;
+        std::cout << "switching hand\n"
+                  << std::endl;
         for (size_t i = 0; i < m_contactSensors.size(); i++)
         {
             ContactSensor &sensor = m_contactSensors[i];
@@ -432,15 +432,15 @@ namespace gazebo
                 // std::cout << "skipping sensor nr: " << i+1 << " of: " << m_contactSensors.size() << std::endl;
                 continue;
             }
-            // std::cout << "detected " << contacts.contact_size() << " contacts at sensor nr: " << i << std::endl;
+            std::cout << "detected " << contacts.contact_size() << " contacts at sensor nr: " << i << std::endl;
             // get pointer to the link
             gazebo::physics::LinkPtr link_name_ptr = m_model->GetLink("iCub::iCub::" + linksLocalNames[i]);
-            // std::cout << "linkLocalNames[i]: " << linksLocalNames[i] << std::endl;
+            std::cout << "linkLocalNames[i]: " << linksLocalNames[i] << std::endl;
 
             // get link coordinates by using the pointer to the model
             ignition::math::Pose3d link_coord;
             link_coord = link_name_ptr->WorldPose();
-            // std::cout << "linkCoordinates:" << link_coord << std::endl;
+            std::cout << "linkCoordinates:" << link_coord << std::endl;
 
             init_palm = true;
             init_finger = true;
@@ -453,15 +453,16 @@ namespace gazebo
             yarp::sig::Vector forceVector(3, 0.0);
             yarp::sig::Vector normVector(3, 0.0);
             yarp::sig::Vector force_dummy(48, 0.0);
-        
+
             // loop over deteceted contacts
             // multiple contacts maybe due to contacts of different vertizies (?, surfaces faces)
-            // std::cout << "contacts.contact_size(): " << contacts.contact_size() << std::endl;
+            std::cout << "contacts.contact_size(): " << contacts.contact_size() << std::endl;
             for (size_t j = 0; j < contacts.contact_size(); j++)
             {
                 // loop over detected collisions
                 // multiple collisions of same surface detected
                 // TODO decide if mean or max to take (implemented with max)
+                // TODO only use the max to remove need of loop
                 // std::cout << "contacts.contact(j).position_size(): " << contacts.contact(j).position_size() << std::endl;
                 for (size_t k = 0; k < contacts.contact(j).position_size(); k++)
                 {
@@ -471,9 +472,24 @@ namespace gazebo
                     forceVector[1] = wrench.body_1_wrench().force().y();
                     forceVector[2] = wrench.body_1_wrench().force().z();
 
-                    // calc geo. resulting force // add normal force as new option and default
+                    // normal
+                    // TODO transpose in respect to fingertip; yet in world frame!!!
+                    // yarp::sig::Vector normVector(3, 0.0);
+                    normVector[0] = contacts.contact(j).normal(k).x();
+                    normVector[1] = contacts.contact(j).normal(k).y();
+                    normVector[2] = contacts.contact(j).normal(k).z();
+
+                    // calculate the normal with respect to the fingertip frame orientation
+                    // read fingertip frame orientation
+
+                    // std::cout << "contact in Link Coordinates: \n" << norm_tip << std::endl;
+
+                    // calc geometric resulting force
+                    // TODO add normal force as new option and default
                     auto force_res = sqrt(pow(forceVector[0], 2) + pow(forceVector[1], 2) + pow(forceVector[2], 2));
-                    // std::cout << "force_res: " << force_res << std::endl;
+                    std::cout << "force_res: " << force_res << std::endl;
+
+                    //  TODO set a threshold here as variable
                     if (force_res <= 0.01)
                     {
                         // std::cout << "No significant force" << std::endl;
@@ -488,31 +504,24 @@ namespace gazebo
                         auto position = contacts.contact(j).position(k);
                         // Convert to a pose with no rotation
                         ignition::math::Pose3d point(position.x(), position.y(), position.z(),
-                                                    0, 0, 0);
+                                                     0, 0, 0);
                         // std::cout << "point: " << point << std::endl;
 
                         // calculate the contact position at the fingertip
                         ignition::math::Pose3d cont_tip = point - link_coord;
                         // std::cout << "contact in Link Coordinates: \n" << cont_tip << std::endl;
 
-                        // normal
-                        // TODO transpose in respect to fingertip; yet in world frame!!!
-                        // yarp::sig::Vector normVector(3, 0.0);
-                        normVector[0] = contacts.contact(j).normal(k).x();
-                        normVector[1] = contacts.contact(j).normal(k).y();
-                        normVector[2] = contacts.contact(j).normal(k).z();
+                        // TODO get rid of initialize for gaussian here (needed cause otherwise variables unkown down the code -> improve)
+                        double max_val_gau;
+                        double f_max;
+                        double m_lin;
+                        double b_lin;
+                        double sigma_max;
+                        double k_exp;
+                        double dist_th;
+                        std::vector<std::vector<double>> taxel_placement;
 
-                        // initialize for gaussian (needed cause otherwise variables unkown down the code TODO improve)
-                        double max_val_gau = 0;
-                        double f_max = 0;
-                        double m_lin = 0;
-                        double b_lin = 0;
-                        double sigma_max = 0;
-                        double k_exp = 0;
-                        double dist_th = 0;
-                        auto taxel_placement = taxel_placement_finger.at(linksLocalNames[i]);
-
-                        // update init calculation with variable for palm or finger
+                        // write fingertip or palm values for further computation
                         if (linksLocalNames[i] == "r_hand" || linksLocalNames[i] == "l_hand")
                         {
                             f_max = f_max_palm;
@@ -521,7 +530,7 @@ namespace gazebo
                             sigma_max = sigma_max_palm;
                             k_exp = k_exp_palm;
                             dist_th = dist_th_palm;
-                            auto taxel_placement = taxel_placement_palm.at(linksLocalNames[i]);
+                            taxel_placement = taxel_placement_palm.at(linksLocalNames[i]);
                         }
                         else
                         {
@@ -531,9 +540,11 @@ namespace gazebo
                             sigma_max = sigma_max_finger;
                             k_exp = k_exp_finger;
                             dist_th = dist_th_finger;
-                            auto taxel_placement = taxel_placement_finger.at(linksLocalNames[i]);
+                            taxel_placement = taxel_placement_finger.at(linksLocalNames[i]);
                         }
                         // std::cout << "calc. sigma" << std::endl;
+
+                        // different scaling methods for the Gaussian
                         if (calc_lin)
                         {
                             if (force_res < f_max)
@@ -556,7 +567,7 @@ namespace gazebo
                             sigma = (1 / (1 + exp(-(2 * force_res - f_max)))) * sigma_max;
                             // std::cout << "sigma: " << sigma << std::endl;
                         }
-                        // safe max. val. of gaussian for normalization
+                        // safe max. val. of Gaussian for scaling
                         for (size_t l = 0; l < number_increments_lengths; l++)
                         {
                             double calc_lengths = -dist_th + l * (2 * dist_th / number_increments_lengths);
@@ -567,10 +578,8 @@ namespace gazebo
                             }
                         }
 
-                        // init
-                        // yarp::sig::Vector diffVector(3, 0.0);
-
                         // calc force per taxel
+                        // TODO to speed up calculation sort taxel per distance and stop calculating new values if the first falls below threshold
                         for (size_t m = 0; m < taxel_placement[0].size(); m++)
                         {
                             // diff between contact position and taxel position
@@ -605,7 +614,7 @@ namespace gazebo
                     taxel_placement[5][m] = force_tax;
                     if (delta_force > delta_force_th_palm)
                     {
-                        // calc # spikes
+                        // calc number of spikes
                         if (spikes_lin)
                         {
                             number_spikes = m_spikes * delta_force + b_spikes;
@@ -630,12 +639,12 @@ namespace gazebo
                                                             yarp::sig::Vector(3, 0.0));
                     iCub::skinDynLib::skinContact skinContact(dynContact);
                     skinContact.setSkinPart(sensor.skinPart);
-                    skinContact.setGeoCenter(diffVector); // distance from center of taxel to contact position
-                    skinContact.setNormalDir(normVector); // only related to force_res
-                    skinContact.setForce(forceVector);    // irrelevant, only geo. mean of force is concidered
-                    skinContact.setPressure(force_dummy[m]);   // instead of pressure give res force
+                    skinContact.setGeoCenter(diffVector);    // distance from center of taxel to contact position
+                    skinContact.setNormalDir(normVector);    // only related to force_res
+                    skinContact.setForce(forceVector);       // irrelevant, only geo. mean of force is concidered
+                    skinContact.setPressure(force_dummy[m]); // instead of pressure give resulting force
 
-                    // Suppose each contact is due to one taxel only
+                    // Suppose each contact is detected by one taxel only
                     skinContact.setActiveTaxels(1); // in the actual implementaion only 1 works
 
                     // Set the right taxel id depending on the finger
